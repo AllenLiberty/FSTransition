@@ -12,9 +12,8 @@ class InteractiveViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let animation = SliderTransitionAnimation()
-        fs_registerBackInteractiveTransition(.left, animation: animation) {[weak self] in
+        fs_registerBackInteractiveTransition(UIRectEdge.left) {[weak self] in
             self?.dismiss(animated: true, completion: nil)
-        }
+            }
     }
 }

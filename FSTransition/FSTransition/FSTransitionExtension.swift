@@ -37,12 +37,11 @@ extension UIViewController {
         objc_setAssociatedObject(self, kInteractiveKey, interactive, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         
     }
-    
-    func fs_registerBackInteractiveTransition<T:FSTransitionAnimationProtocol>(_ derection: UIRectEdge, animation:T? = nil, block:@escaping (()->())){
+    func fs_registerBackInteractiveTransition(_ derection: UIRectEdge, block:@escaping (()->())){
         let interactive = FSInteractiveTransition()
         interactive.eventBlock = block
         interactive.addEdgePageGesture(self.view, direction: derection)
-        if let transitionManager = objc_getAssociatedObject(self, kAnimationKey) as? FSTransitionManager<T> {
+        if let transitionManager = objc_getAssociatedObject(self, kAnimationKey) as? FSTransitionManager{
             transitionManager.backInteractiveTransition = interactive
         }
     }

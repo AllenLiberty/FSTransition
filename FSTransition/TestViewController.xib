@@ -25,7 +25,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="dismiss"/>
                     <connections>
-                        <action selector="onButton:" destination="-1" eventType="touchUpInside" id="sjU-4Q-MWR"/>
+                        <action selector="onDismiss:" destination="-1" eventType="touchUpInside" id="SqU-dL-PEp"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNu-dB-RKb">

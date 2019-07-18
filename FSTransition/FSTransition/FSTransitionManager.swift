@@ -11,9 +11,9 @@ import UIKit
 let kAnimationKey: UnsafeRawPointer = UnsafeRawPointer.init(bitPattern: "kAnimationKey".hashValue)!
 let kInteractiveKey: UnsafeRawPointer = UnsafeRawPointer.init(bitPattern: "kInteractiveKey".hashValue)!
 
-open class FSTransitionManager<T: FSTransitionAnimationProtocol>: NSObject, UIViewControllerTransitioningDelegate,UINavigationControllerDelegate{
+open class FSTransitionManager: NSObject, UIViewControllerTransitioningDelegate,UINavigationControllerDelegate{
     
-    public private(set) var animation: T
+    public private(set) var animation: FSTransitionAnimationProtocol
     
     private var operation: UINavigationController.Operation = .none
     
@@ -31,7 +31,6 @@ open class FSTransitionManager<T: FSTransitionAnimationProtocol>: NSObject, UIVi
                 }
                 context.completeTransition(!context.transitionWasCancelled)
             })
-//            self?.animation.setToAnimation(context)
         }
         return animation
     }()
@@ -58,7 +57,7 @@ open class FSTransitionManager<T: FSTransitionAnimationProtocol>: NSObject, UIVi
     
     var backInteractiveTransition: FSInteractiveTransition?
     
-    init(_ animation: T) {
+    init(_ animation: FSTransitionAnimationProtocol) {
         self.animation = animation
     }
     

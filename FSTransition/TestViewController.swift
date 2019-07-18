@@ -14,7 +14,7 @@ class TestViewController: UIViewController {
         super.viewDidLoad()
     }
 
-    @IBAction func onButton(_ sender: Any) {
+    @IBAction func onDismiss(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
