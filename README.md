@@ -14,11 +14,11 @@
 import UIKit
 class ScaleTransitionAnimation: FSTransitionAnimationProtocol {
     func setToAnimation(_ fromView: UIView, toView: UIView, containerView: UIView, animationComplete: @escaping (() -> ())) {
-        
+        // 在这里完成你的进场动画  
     }
     
     func backToAnimation(_ fromView: UIView, toView: UIView, containerView: UIView, animationComplete: @escaping (() -> ())) {
-        
+        // 在这里完成你的退场动画
     }
 }
 
