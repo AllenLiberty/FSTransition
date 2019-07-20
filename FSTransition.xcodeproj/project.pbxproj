@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840AD7EB22E15E1D005C9ECC /* OpenDoorTranstionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840AD7EA22E15E1D005C9ECC /* OpenDoorTranstionAnimation.swift */; };
 		845D4D4022D7226B00B67C42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D4D3F22D7226B00B67C42 /* AppDelegate.swift */; };
 		845D4D4222D7226B00B67C42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D4D4122D7226B00B67C42 /* ViewController.swift */; };
 		845D4D4522D7226B00B67C42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845D4D4322D7226B00B67C42 /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		840AD7EA22E15E1D005C9ECC /* OpenDoorTranstionAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenDoorTranstionAnimation.swift; sourceTree = "<group>"; };
 		845D4D3C22D7226B00B67C42 /* FSTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FSTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		845D4D3F22D7226B00B67C42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		845D4D4122D7226B00B67C42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -119,14 +121,13 @@
 		845D4D3E22D7226B00B67C42 /* FSTransition */ = {
 			isa = PBXGroup;
 			children = (
+				84D68FF922E01B3400D30E95 /* Animation */,
 				845D4D7C22D7304000B67C42 /* Support */,
 				845D4D6D22D7228700B67C42 /* FSTransition */,
 				845D4D4122D7226B00B67C42 /* ViewController.swift */,
 				845D4D4322D7226B00B67C42 /* Main.storyboard */,
 				845D4D7822D7303600B67C42 /* TestViewController.swift */,
 				845D4D7922D7303600B67C42 /* TestViewController.xib */,
-				845D4D7D22D7308D00B67C42 /* ScaleTransitionAnimation.swift */,
-				84D68FF222DEC2A700D30E95 /* SliderTransitionAnimation.swift */,
 				84D68FF422DF03BC00D30E95 /* InteractiveViewController.swift */,
 				84D68FF522DF03BC00D30E95 /* InteractiveViewController.xib */,
 			);
@@ -172,6 +173,16 @@
 				845D4D4B22D7226C00B67C42 /* Info.plist */,
 			);
 			name = Support;
+			sourceTree = "<group>";
+		};
+		84D68FF922E01B3400D30E95 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				845D4D7D22D7308D00B67C42 /* ScaleTransitionAnimation.swift */,
+				84D68FF222DEC2A700D30E95 /* SliderTransitionAnimation.swift */,
+				840AD7EA22E15E1D005C9ECC /* OpenDoorTranstionAnimation.swift */,
+			);
+			path = Animation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +324,7 @@
 				845D4D7E22D7308D00B67C42 /* ScaleTransitionAnimation.swift in Sources */,
 				845D4D7A22D7303600B67C42 /* TestViewController.swift in Sources */,
 				845D4D4222D7226B00B67C42 /* ViewController.swift in Sources */,
+				840AD7EB22E15E1D005C9ECC /* OpenDoorTranstionAnimation.swift in Sources */,
 				84D68FF322DEC2A700D30E95 /* SliderTransitionAnimation.swift in Sources */,
 				845D4D4022D7226B00B67C42 /* AppDelegate.swift in Sources */,
 				845D4D7322D722F700B67C42 /* FSTransitionAnimation.swift in Sources */,

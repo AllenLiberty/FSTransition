@@ -18,6 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tesila" translatesAutoresizingMaskIntoConstraints="NO" id="dxa-7c-AIT">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bt4-dn-2aS">
                                 <rect key="frame" x="0.0" y="161" width="414" height="40"/>
                                 <constraints>
@@ -63,16 +66,20 @@
                         <constraints>
                             <constraint firstItem="Nqb-62-wbb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7pN-6h-F1N"/>
                             <constraint firstItem="Y2n-O5-qu7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9L3-uF-J1i"/>
+                            <constraint firstItem="dxa-7c-AIT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Aht-CK-hn8"/>
                             <constraint firstItem="P5K-0U-9vJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Fkc-qf-ucE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Nqb-62-wbb" secondAttribute="trailing" id="G1Y-uW-791"/>
                             <constraint firstItem="bt4-dn-2aS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="M5K-00-g5r"/>
                             <constraint firstItem="Y2n-O5-qu7" firstAttribute="top" secondItem="Nqb-62-wbb" secondAttribute="bottom" constant="8" id="NEd-xJ-nb3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bt4-dn-2aS" secondAttribute="trailing" id="Oxx-yF-qD6"/>
+                            <constraint firstItem="dxa-7c-AIT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RZg-Df-sep"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dxa-7c-AIT" secondAttribute="trailing" id="Ul7-gz-rAJ"/>
                             <constraint firstItem="Nqb-62-wbb" firstAttribute="top" secondItem="P5K-0U-9vJ" secondAttribute="bottom" constant="40" id="VAU-aj-hOe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Y2n-O5-qu7" secondAttribute="trailing" id="YfQ-f2-np9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="P5K-0U-9vJ" secondAttribute="trailing" id="Zk0-ah-7eF"/>
                             <constraint firstItem="bt4-dn-2aS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="73" id="do9-er-Cki"/>
                             <constraint firstItem="P5K-0U-9vJ" firstAttribute="top" secondItem="bt4-dn-2aS" secondAttribute="bottom" constant="8" id="mrP-YO-3YW"/>
+                            <constraint firstAttribute="bottom" secondItem="dxa-7c-AIT" secondAttribute="bottom" id="oDS-DX-CVe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -80,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="946" y="-535"/>
+            <point key="canvasLocation" x="944.92753623188412" y="-535.04464285714278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="plt-fL-fCJ">
@@ -99,4 +106,7 @@
             <point key="canvasLocation" x="-151" y="-535"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tesila" width="180" height="242.66667175292969"/>
+    </resources>
 </document>

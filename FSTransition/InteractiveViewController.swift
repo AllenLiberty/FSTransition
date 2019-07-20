@@ -9,7 +9,6 @@
 import UIKit
 
 class InteractiveViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         fs_registerBackInteractiveTransition(UIRectEdge.left) {[weak self] in

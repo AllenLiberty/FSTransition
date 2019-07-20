@@ -12,15 +12,15 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.fs_registerToInteractiveTransition(.right) {[weak self] in
-            let animation = SliderTransitionAnimation()
+        self.fs_registerToInteractiveTransition(.right) { [weak self] in
+            let animation = OpenDoorTranstionAnimation()
             let vc = InteractiveViewController.init(nibName: "InteractiveViewController", bundle: nil)
             self?.fs_presentViewController(vc, animation: animation)
         }
     }
 
     @IBAction func onPushAnimation(_ sender: Any) {
-        let animation = ScaleTransitionAnimation()
+        let animation = SliderTransitionAnimation()
         let vc = TestViewController.init(nibName: "TestViewController", bundle: nil)
         self.fs_pushViewController(vc, animation: animation)
     }

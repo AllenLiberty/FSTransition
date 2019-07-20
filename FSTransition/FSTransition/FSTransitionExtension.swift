@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIViewController {
+public extension UIViewController {
     func fs_pushViewController<T: FSTransitionAnimationProtocol>(_ viewController:UIViewController, animation:T) {
         guard let naviationController = self.navigationController else { return }
         let transitionManager = FSTransitionManager.init(animation)
