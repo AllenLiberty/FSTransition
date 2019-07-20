@@ -5,7 +5,7 @@
 * 清晰的Interface
 
 ### 结果演示
-![markdown](https://github.com/AllenLiberty/FSTransition/blob/master/GIF/2019-07-18%2010-25-14.2019-07-18%2010_25_48.gif)!
+![markdown](https://github.com/AllenLiberty/FSTransition/blob/master/GIF/2019-07-20%2011-54-20.2019-07-20%2012_10_39.gif)!
 
 ### 使用
 #### 1. 创建一个动画实现类 遵循FSTransitionAnimationProtocol协议
