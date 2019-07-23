@@ -11,7 +11,7 @@ import UIKit
 class InteractiveViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        fs_registerBackInteractiveTransition(UIRectEdge.left) {[weak self] in
+        fs_registerBackInteractiveTransition(.left) {[weak self] in
             self?.dismiss(animated: true, completion: nil)
             }
     }

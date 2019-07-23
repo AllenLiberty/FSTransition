@@ -30,14 +30,14 @@ public extension UIViewController {
         self.present(viewController, animated: true, completion: nil)
     }
     
-    func fs_registerToInteractiveTransition(_ derection: UIRectEdge, block:@escaping (() -> ())) {
+    func fs_registerToInteractiveTransition(_ derection: TransitionDirection, block:@escaping (() -> ())) {
         let interactive = FSInteractiveTransition()
         interactive.eventBlock = block
         interactive.addEdgePageGesture(self.view, direction: derection)
         objc_setAssociatedObject(self, kInteractiveKey, interactive, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         
     }
-    func fs_registerBackInteractiveTransition(_ derection: UIRectEdge, block:@escaping (()->())){
+    func fs_registerBackInteractiveTransition(_ derection: TransitionDirection, block:@escaping (()->())){
         let interactive = FSInteractiveTransition()
         interactive.eventBlock = block
         interactive.addEdgePageGesture(self.view, direction: derection)

@@ -61,6 +61,12 @@
                                     <action selector="onPushAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fhc-To-pd3"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9h-ac-YTm">
+                                <rect key="frame" x="172" y="438" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.98039215690000003" green="0.3921568627" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -69,6 +75,7 @@
                             <constraint firstItem="dxa-7c-AIT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Aht-CK-hn8"/>
                             <constraint firstItem="P5K-0U-9vJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Fkc-qf-ucE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Nqb-62-wbb" secondAttribute="trailing" id="G1Y-uW-791"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="z9h-ac-YTm" secondAttribute="trailing" constant="200" id="GOP-kL-JBu"/>
                             <constraint firstItem="bt4-dn-2aS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="M5K-00-g5r"/>
                             <constraint firstItem="Y2n-O5-qu7" firstAttribute="top" secondItem="Nqb-62-wbb" secondAttribute="bottom" constant="8" id="NEd-xJ-nb3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bt4-dn-2aS" secondAttribute="trailing" id="Oxx-yF-qD6"/>
@@ -77,6 +84,7 @@
                             <constraint firstItem="Nqb-62-wbb" firstAttribute="top" secondItem="P5K-0U-9vJ" secondAttribute="bottom" constant="40" id="VAU-aj-hOe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Y2n-O5-qu7" secondAttribute="trailing" id="YfQ-f2-np9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="P5K-0U-9vJ" secondAttribute="trailing" id="Zk0-ah-7eF"/>
+                            <constraint firstItem="z9h-ac-YTm" firstAttribute="top" secondItem="Y2n-O5-qu7" secondAttribute="bottom" constant="61" id="a0e-kT-Zcq"/>
                             <constraint firstItem="bt4-dn-2aS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="73" id="do9-er-Cki"/>
                             <constraint firstItem="P5K-0U-9vJ" firstAttribute="top" secondItem="bt4-dn-2aS" secondAttribute="bottom" constant="8" id="mrP-YO-3YW"/>
                             <constraint firstAttribute="bottom" secondItem="dxa-7c-AIT" secondAttribute="bottom" id="oDS-DX-CVe"/>

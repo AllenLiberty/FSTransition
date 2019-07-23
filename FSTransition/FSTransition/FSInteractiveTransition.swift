@@ -8,36 +8,42 @@
 
 import UIKit
 
-class FSInteractiveTransition: UIPercentDrivenInteractiveTransition,UIGestureRecognizerDelegate{
+class FSInteractiveTransition: UIPercentDrivenInteractiveTransition{
     
     var isPanGestureIneration = false
     public var eventBlock: (() -> ())?
     private weak var gestureView: UIView?
     
-    func addEdgePageGesture(_ view: UIView, direction: UIRectEdge){
-        let popRecognizer = UIScreenEdgePanGestureRecognizer.init(target: self, action: #selector(handlePopRecognizer(_:)))
-        popRecognizer.edges = direction
-        popRecognizer.delegate = self
+    func addEdgePageGesture(_ view: UIView, direction: TransitionDirection){
+        let recognizer = InteractiveTransitionRecognizer.init(target: self, action: #selector(handlePopRecognizer(_:)))
+        recognizer.direction = direction
         gestureView = view
-        view.addGestureRecognizer(popRecognizer)
+        
+        view.addGestureRecognizer(recognizer)
     }
     
-    @objc func handlePopRecognizer(_ recognizer: UIScreenEdgePanGestureRecognizer){
+    @objc func handlePopRecognizer(_ recognizer: InteractiveTransitionRecognizer){
         var progress:Float = 0.0
-        switch recognizer.edges {
-        case .left, .right, .all:
+        switch recognizer.direction {
+        case .left, .right:
             progress = fabsf(Float(recognizer.translation(in: gestureView!).x)) / Float(gestureView!.bounds.width)
         case .top, .bottom:
             progress = fabsf(Float(recognizer.translation(in: gestureView!).y)) / Float(gestureView!.bounds.width)
+        case .leftOffset(let offset):
+            let point = recognizer.translation(in: gestureView!).x
+            progress = Float(recognizer.translation(in: gestureView!).x - offset) / Float(gestureView!.bounds.width - offset)
+        case .rightOffset(let offset):
+            progress = Float(recognizer.translation(in: gestureView!).x) / Float(gestureView!.bounds.width - offset)
+            progress = progress > 0 ? 0 : -progress
         default:
             break
         }
         progress = min(1.0, max(0.0, progress))
-        print("progress:::::\(progress)")
         switch recognizer.state {
         case .began:
             isPanGestureIneration = true
             eventBlock?()
+            print("begin")
             break
         case .changed:
             update(CGFloat(progress))
@@ -53,10 +59,5 @@ class FSInteractiveTransition: UIPercentDrivenInteractiveTransition,UIGestureRec
         default:
             break
         }
-    }
-    
-    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
-        print("")
-        return true
     }
 }
