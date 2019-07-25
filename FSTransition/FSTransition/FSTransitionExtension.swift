@@ -46,3 +46,22 @@ public extension UIViewController {
         }
     }
 }
+
+public extension UIView {
+    func snapshotView(_ rect:CGRect) -> UIImageView? {
+        UIGraphicsBeginImageContextWithOptions(bounds.size, false, 0.0)
+        let context = UIGraphicsGetCurrentContext()!
+        layer.render(in: context)
+        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        let scale = max(image.size.width / rect.width, image.size.height / rect.height)
+        let cropRect = CGRect(x: rect.origin.x * scale, y: rect.origin.y * scale, width: rect.width * scale, height: rect.height * scale)
+        if let imgRef = image.cgImage?.cropping(to: cropRect) {
+            
+            let img = UIImage(cgImage:imgRef)
+            return UIImageView.init(image: img)
+        }
+        
+        return UIImageView.init(image: image)
+    }
+}

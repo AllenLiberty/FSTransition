@@ -12,19 +12,10 @@ class SecondFloorFirstViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        fs_registerToInteractiveTransition([.topOffset(82.0)]) {[weak self] in
+            let animation = SecondFloorTransitionAnimation.init(topOffset: 82.0)
+            let vc = SecondFloorSecondViewController.init(nibName: "SecondFloorSecondViewController", bundle: nil)
+            self?.fs_pushViewController(vc, animation: animation)
+        }
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

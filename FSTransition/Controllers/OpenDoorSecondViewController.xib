@@ -20,12 +20,17 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nymph" translatesAutoresizingMaskIntoConstraints="NO" id="nKj-5J-V0G">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nymph" translatesAutoresizingMaskIntoConstraints="NO" id="nKj-5J-V0G">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="nKj-5J-V0G" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="YCA-Ec-lgU"/>
+                <constraint firstItem="nKj-5J-V0G" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="a08-4J-UKt"/>
+                <constraint firstAttribute="bottom" secondItem="nKj-5J-V0G" secondAttribute="bottom" id="qah-bq-Twc"/>
+                <constraint firstItem="nKj-5J-V0G" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="x9o-QP-IfN"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="47.826086956521742" y="42.857142857142854"/>
         </view>

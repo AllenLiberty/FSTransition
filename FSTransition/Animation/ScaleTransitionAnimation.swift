@@ -10,24 +10,28 @@ import UIKit
 
 class ScaleTransitionAnimation: FSTransitionAnimationProtocol {
     func setToAnimation(_ fromView: UIView, toView: UIView, containerView: UIView, animationComplete:@escaping (() -> ())) {
+        guard let snapFromView = fromView.resizableSnapshotView(from: fromView.bounds, afterScreenUpdates: true, withCapInsets: .zero) else { return }
         containerView.addSubview(toView)
-        containerView.addSubview(fromView)
-        fromView.transform = CGAffineTransform.identity
+        containerView.addSubview(snapFromView)
+        snapFromView.transform = CGAffineTransform.identity
         
         UIView.animate(withDuration: 0.6, animations: {
-            fromView.transform = CGAffineTransform.init(scaleX: 0.01, y: 0.01)
+            snapFromView.transform = CGAffineTransform.init(scaleX: 0.01, y: 0.01)
         }) { (finish) in
+            snapFromView.removeFromSuperview()
             animationComplete()
         }
     }
     
     func backToAnimation(_ fromView: UIView, toView: UIView, containerView: UIView, animationComplete:@escaping (() -> ())) {
+        guard let snapToView = toView.resizableSnapshotView(from: toView.bounds, afterScreenUpdates: true, withCapInsets: .zero) else { return }
         containerView.addSubview(fromView)
-        containerView.addSubview(toView)
-        toView.transform = CGAffineTransform.init(scaleX: 0.01, y: 0.01)
+        containerView.addSubview(snapToView)
+        snapToView.transform = CGAffineTransform.init(scaleX: 0.01, y: 0.01)
         UIView.animate(withDuration: 0.6, animations: {
-            toView.transform = CGAffineTransform.identity
+            snapToView.transform = CGAffineTransform.identity
         }) { (finish) in
+            snapToView.removeFromSuperview()
             animationComplete()
         }
     }

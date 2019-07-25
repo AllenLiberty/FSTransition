@@ -41,6 +41,7 @@ class OpenMiddleTranstionAnimation: FSTransitionAnimationProtocol {
     }
     
     func backToAnimation(_ fromView: UIView, toView: UIView, containerView: UIView, animationComplete: @escaping (() -> ())) {
+        containerView.addSubview(toView)
         let leftFrame = CGRect(x: 0, y: 0, width: fromView.frame.width / 2.0, height: toView.frame.height)
         let rightFrame = CGRect(x: leftFrame.width, y: 0, width: fromView.frame.width / 2.0, height: toView.frame.height)
         guard let rightView = toView.resizableSnapshotView(from: rightFrame, afterScreenUpdates: true, withCapInsets: .zero) else { return }

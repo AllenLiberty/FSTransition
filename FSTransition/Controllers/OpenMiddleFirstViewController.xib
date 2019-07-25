@@ -20,13 +20,11 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="door" translatesAutoresizingMaskIntoConstraints="NO" id="wcz-aR-nrZ">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="door" translatesAutoresizingMaskIntoConstraints="NO" id="wcz-aR-nrZ">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyo-9z-RfW">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyo-9z-RfW">
                     <rect key="frame" x="26" y="44" width="34" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="back"/>
                     <connections>
                         <action selector="onBack:" destination="-1" eventType="touchUpInside" id="NPt-Su-QQu"/>
@@ -34,6 +32,14 @@
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="wcz-aR-nrZ" secondAttribute="bottom" id="04u-II-m91"/>
+                <constraint firstItem="wcz-aR-nrZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2yh-au-bby"/>
+                <constraint firstItem="wcz-aR-nrZ" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="4KU-SP-tyN"/>
+                <constraint firstItem="dyo-9z-RfW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="76B-rs-GDk"/>
+                <constraint firstItem="wcz-aR-nrZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="E5I-qv-2fk"/>
+                <constraint firstItem="dyo-9z-RfW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="26" id="yju-1i-gRi"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="96.428571428571431"/>
         </view>

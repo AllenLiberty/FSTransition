@@ -78,7 +78,7 @@ open class InteractiveTransitionRecognizer: UIPanGestureRecognizer {
         case .topOffset(let topOffset):
             return ((point.y > topOffset) && (point.y < topOffset + offSet)) && getSwipeDirection(self, view: view) == .toBottom
         case .bottomOffset(let bottomOffset):
-            return ((point.y < (view.frame.width - bottomOffset)) && (point.y > (view.frame.width - bottomOffset - offSet))) && getSwipeDirection(self, view: view) == .toTop
+            return ((point.y < (view.frame.height - bottomOffset)) && (point.y > (view.frame.height - bottomOffset - offSet))) && getSwipeDirection(self, view: view) == .toTop
         }
     }
 }

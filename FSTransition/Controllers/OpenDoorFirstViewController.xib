@@ -20,13 +20,11 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="door1" translatesAutoresizingMaskIntoConstraints="NO" id="fNP-hT-Sdc">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="door1" translatesAutoresizingMaskIntoConstraints="NO" id="fNP-hT-Sdc">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEL-h4-GX6">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEL-h4-GX6">
                     <rect key="frame" x="20" y="44" width="34" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="back"/>
                     <connections>
                         <action selector="onBack:" destination="-1" eventType="touchUpInside" id="mil-kZ-u2g"/>
@@ -34,6 +32,14 @@
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="pEL-h4-GX6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="3X4-0R-ajy"/>
+                <constraint firstAttribute="bottom" secondItem="fNP-hT-Sdc" secondAttribute="bottom" id="77A-V8-2mk"/>
+                <constraint firstItem="pEL-h4-GX6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="F56-KO-ktm"/>
+                <constraint firstItem="fNP-hT-Sdc" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="JEV-0g-QPk"/>
+                <constraint firstItem="fNP-hT-Sdc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="KlO-8d-hzS"/>
+                <constraint firstItem="fNP-hT-Sdc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="YP1-oR-LyL"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
     </objects>

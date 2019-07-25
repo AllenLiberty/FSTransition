@@ -30,7 +30,7 @@ class FSInteractiveTransition: UIPercentDrivenInteractiveTransition{
             progress = fabsf(Float(recognizer.translation(in: gestureView!).x)) / Float(gestureView!.bounds.width)
             break
         case .top, .bottom:
-            progress = fabsf(Float(recognizer.translation(in: gestureView!).y)) / Float(gestureView!.bounds.width)
+            progress = fabsf(Float(recognizer.translation(in: gestureView!).y)) / Float(gestureView!.bounds.height)
             break
         case .leftOffset(let offset):
             progress = Float(recognizer.translation(in: gestureView!).x - offset) / Float(gestureView!.bounds.width - offset)
@@ -41,11 +41,11 @@ class FSInteractiveTransition: UIPercentDrivenInteractiveTransition{
             progress = progress > 0 ? 0 : -progress
             break
         case .topOffset(let topset):
-            progress = fabsf(Float(recognizer.translation(in: gestureView!).y)) / Float(gestureView!.bounds.width - topset)
+            progress = fabsf(Float(recognizer.translation(in: gestureView!).y)) / Float(gestureView!.bounds.height - topset)
             break
         case .bottomOffset(let bottomset):
             let yyyy = recognizer.translation(in: gestureView!).y
-            progress = fabsf(Float(recognizer.translation(in: gestureView!).y)) / Float(gestureView!.bounds.width - bottomset)
+            progress = fabsf(Float(recognizer.translation(in: gestureView!).y)) / Float(gestureView!.bounds.height - bottomset)
             print("yyyy:\(yyyy)")
             
             break
