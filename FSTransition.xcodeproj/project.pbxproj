@@ -24,9 +24,32 @@
 		845D4D7B22D7303600B67C42 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845D4D7922D7303600B67C42 /* TestViewController.xib */; };
 		845D4D7E22D7308D00B67C42 /* ScaleTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D4D7D22D7308D00B67C42 /* ScaleTransitionAnimation.swift */; };
 		848BBFE022E5877C00454902 /* FSInteractiveTransitionRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BBFDF22E5877C00454902 /* FSInteractiveTransitionRecognizer.swift */; };
+		848BBFE322E7F9D500454902 /* SecondFloorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BBFE122E7F9D500454902 /* SecondFloorViewController.swift */; };
+		848BBFE422E7F9D500454902 /* SecondFloorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848BBFE222E7F9D500454902 /* SecondFloorViewController.xib */; };
+		848BBFE622E7FA6D00454902 /* SecondFloorTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BBFE522E7FA6D00454902 /* SecondFloorTransitionAnimation.swift */; };
+		848BBFEC22E83C9A00454902 /* ScaleFristViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BBFEA22E83C9A00454902 /* ScaleFristViewController.swift */; };
+		848BBFED22E83C9A00454902 /* ScaleFristViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848BBFEB22E83C9A00454902 /* ScaleFristViewController.xib */; };
+		848BBFF022E83CAF00454902 /* ScaleSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BBFEE22E83CAF00454902 /* ScaleSecondViewController.swift */; };
+		848BBFF122E83CAF00454902 /* ScaleSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848BBFEF22E83CAF00454902 /* ScaleSecondViewController.xib */; };
+		848BBFF422E83CF300454902 /* SliderFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BBFF222E83CF300454902 /* SliderFirstViewController.swift */; };
+		848BBFF522E83CF300454902 /* SliderFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848BBFF322E83CF300454902 /* SliderFirstViewController.xib */; };
+		848BBFF822E83EB900454902 /* SliderSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BBFF622E83EB900454902 /* SliderSecondViewController.swift */; };
+		848BBFF922E83EB900454902 /* SliderSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848BBFF722E83EB900454902 /* SliderSecondViewController.xib */; };
+		848BBFFC22E83ECC00454902 /* OpenDoorFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BBFFA22E83ECC00454902 /* OpenDoorFirstViewController.swift */; };
+		848BBFFD22E83ECC00454902 /* OpenDoorFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848BBFFB22E83ECC00454902 /* OpenDoorFirstViewController.xib */; };
+		848BC00022E83EDD00454902 /* OpenDoorSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BBFFE22E83EDD00454902 /* OpenDoorSecondViewController.swift */; };
+		848BC00122E83EDD00454902 /* OpenDoorSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848BBFFF22E83EDD00454902 /* OpenDoorSecondViewController.xib */; };
+		848BC00422E83F2900454902 /* OpenMiddleFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BC00222E83F2900454902 /* OpenMiddleFirstViewController.swift */; };
+		848BC00522E83F2900454902 /* OpenMiddleFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848BC00322E83F2900454902 /* OpenMiddleFirstViewController.xib */; };
+		848BC00822E83F9D00454902 /* OpenMiddleSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BC00622E83F9D00454902 /* OpenMiddleSecondViewController.swift */; };
+		848BC00922E83F9D00454902 /* OpenMiddleSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848BC00722E83F9D00454902 /* OpenMiddleSecondViewController.xib */; };
 		84B36ECE22E55ED400AA4C8D /* OpenMiddleTranstionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B36ECD22E55ED400AA4C8D /* OpenMiddleTranstionAnimation.swift */; };
 		84B36ED122E5653300AA4C8D /* DoorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B36ECF22E5653300AA4C8D /* DoorViewController.swift */; };
 		84B36ED222E5653300AA4C8D /* DoorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84B36ED022E5653300AA4C8D /* DoorViewController.xib */; };
+		84B6CC6022E83FE9008E9392 /* SecondFloorFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6CC5E22E83FE9008E9392 /* SecondFloorFirstViewController.swift */; };
+		84B6CC6122E83FE9008E9392 /* SecondFloorFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84B6CC5F22E83FE9008E9392 /* SecondFloorFirstViewController.xib */; };
+		84B6CC6422E83FFD008E9392 /* SecondFloorSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6CC6222E83FFD008E9392 /* SecondFloorSecondViewController.swift */; };
+		84B6CC6522E83FFD008E9392 /* SecondFloorSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84B6CC6322E83FFD008E9392 /* SecondFloorSecondViewController.xib */; };
 		84D68FF322DEC2A700D30E95 /* SliderTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D68FF222DEC2A700D30E95 /* SliderTransitionAnimation.swift */; };
 		84D68FF622DF03BC00D30E95 /* InteractiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D68FF422DF03BC00D30E95 /* InteractiveViewController.swift */; };
 		84D68FF722DF03BC00D30E95 /* InteractiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D68FF522DF03BC00D30E95 /* InteractiveViewController.xib */; };
@@ -73,9 +96,32 @@
 		845D4D7922D7303600B67C42 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		845D4D7D22D7308D00B67C42 /* ScaleTransitionAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleTransitionAnimation.swift; sourceTree = "<group>"; };
 		848BBFDF22E5877C00454902 /* FSInteractiveTransitionRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSInteractiveTransitionRecognizer.swift; sourceTree = "<group>"; };
+		848BBFE122E7F9D500454902 /* SecondFloorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondFloorViewController.swift; sourceTree = "<group>"; };
+		848BBFE222E7F9D500454902 /* SecondFloorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondFloorViewController.xib; sourceTree = "<group>"; };
+		848BBFE522E7FA6D00454902 /* SecondFloorTransitionAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondFloorTransitionAnimation.swift; sourceTree = "<group>"; };
+		848BBFEA22E83C9A00454902 /* ScaleFristViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleFristViewController.swift; sourceTree = "<group>"; };
+		848BBFEB22E83C9A00454902 /* ScaleFristViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScaleFristViewController.xib; sourceTree = "<group>"; };
+		848BBFEE22E83CAF00454902 /* ScaleSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleSecondViewController.swift; sourceTree = "<group>"; };
+		848BBFEF22E83CAF00454902 /* ScaleSecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScaleSecondViewController.xib; sourceTree = "<group>"; };
+		848BBFF222E83CF300454902 /* SliderFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderFirstViewController.swift; sourceTree = "<group>"; };
+		848BBFF322E83CF300454902 /* SliderFirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderFirstViewController.xib; sourceTree = "<group>"; };
+		848BBFF622E83EB900454902 /* SliderSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderSecondViewController.swift; sourceTree = "<group>"; };
+		848BBFF722E83EB900454902 /* SliderSecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderSecondViewController.xib; sourceTree = "<group>"; };
+		848BBFFA22E83ECC00454902 /* OpenDoorFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenDoorFirstViewController.swift; sourceTree = "<group>"; };
+		848BBFFB22E83ECC00454902 /* OpenDoorFirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenDoorFirstViewController.xib; sourceTree = "<group>"; };
+		848BBFFE22E83EDD00454902 /* OpenDoorSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenDoorSecondViewController.swift; sourceTree = "<group>"; };
+		848BBFFF22E83EDD00454902 /* OpenDoorSecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenDoorSecondViewController.xib; sourceTree = "<group>"; };
+		848BC00222E83F2900454902 /* OpenMiddleFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenMiddleFirstViewController.swift; sourceTree = "<group>"; };
+		848BC00322E83F2900454902 /* OpenMiddleFirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenMiddleFirstViewController.xib; sourceTree = "<group>"; };
+		848BC00622E83F9D00454902 /* OpenMiddleSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenMiddleSecondViewController.swift; sourceTree = "<group>"; };
+		848BC00722E83F9D00454902 /* OpenMiddleSecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenMiddleSecondViewController.xib; sourceTree = "<group>"; };
 		84B36ECD22E55ED400AA4C8D /* OpenMiddleTranstionAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenMiddleTranstionAnimation.swift; sourceTree = "<group>"; };
 		84B36ECF22E5653300AA4C8D /* DoorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorViewController.swift; sourceTree = "<group>"; };
 		84B36ED022E5653300AA4C8D /* DoorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoorViewController.xib; sourceTree = "<group>"; };
+		84B6CC5E22E83FE9008E9392 /* SecondFloorFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondFloorFirstViewController.swift; sourceTree = "<group>"; };
+		84B6CC5F22E83FE9008E9392 /* SecondFloorFirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondFloorFirstViewController.xib; sourceTree = "<group>"; };
+		84B6CC6222E83FFD008E9392 /* SecondFloorSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondFloorSecondViewController.swift; sourceTree = "<group>"; };
+		84B6CC6322E83FFD008E9392 /* SecondFloorSecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondFloorSecondViewController.xib; sourceTree = "<group>"; };
 		84D68FF222DEC2A700D30E95 /* SliderTransitionAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderTransitionAnimation.swift; sourceTree = "<group>"; };
 		84D68FF422DF03BC00D30E95 /* InteractiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveViewController.swift; sourceTree = "<group>"; };
 		84D68FF522DF03BC00D30E95 /* InteractiveViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InteractiveViewController.xib; sourceTree = "<group>"; };
@@ -134,12 +180,15 @@
 				845D4D6D22D7228700B67C42 /* FSTransition */,
 				845D4D4122D7226B00B67C42 /* ViewController.swift */,
 				845D4D4322D7226B00B67C42 /* Main.storyboard */,
+				848BBFE722E83C1C00454902 /* Controllers */,
 				845D4D7822D7303600B67C42 /* TestViewController.swift */,
 				845D4D7922D7303600B67C42 /* TestViewController.xib */,
 				84D68FF422DF03BC00D30E95 /* InteractiveViewController.swift */,
 				84D68FF522DF03BC00D30E95 /* InteractiveViewController.xib */,
 				84B36ECF22E5653300AA4C8D /* DoorViewController.swift */,
 				84B36ED022E5653300AA4C8D /* DoorViewController.xib */,
+				848BBFE122E7F9D500454902 /* SecondFloorViewController.swift */,
+				848BBFE222E7F9D500454902 /* SecondFloorViewController.xib */,
 			);
 			path = FSTransition;
 			sourceTree = "<group>";
@@ -186,6 +235,33 @@
 			name = Support;
 			sourceTree = "<group>";
 		};
+		848BBFE722E83C1C00454902 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				848BBFEA22E83C9A00454902 /* ScaleFristViewController.swift */,
+				848BBFEB22E83C9A00454902 /* ScaleFristViewController.xib */,
+				848BBFEE22E83CAF00454902 /* ScaleSecondViewController.swift */,
+				848BBFEF22E83CAF00454902 /* ScaleSecondViewController.xib */,
+				848BBFF222E83CF300454902 /* SliderFirstViewController.swift */,
+				848BBFF322E83CF300454902 /* SliderFirstViewController.xib */,
+				848BBFF622E83EB900454902 /* SliderSecondViewController.swift */,
+				848BBFF722E83EB900454902 /* SliderSecondViewController.xib */,
+				848BBFFA22E83ECC00454902 /* OpenDoorFirstViewController.swift */,
+				848BBFFB22E83ECC00454902 /* OpenDoorFirstViewController.xib */,
+				848BBFFE22E83EDD00454902 /* OpenDoorSecondViewController.swift */,
+				848BBFFF22E83EDD00454902 /* OpenDoorSecondViewController.xib */,
+				848BC00222E83F2900454902 /* OpenMiddleFirstViewController.swift */,
+				848BC00322E83F2900454902 /* OpenMiddleFirstViewController.xib */,
+				848BC00622E83F9D00454902 /* OpenMiddleSecondViewController.swift */,
+				848BC00722E83F9D00454902 /* OpenMiddleSecondViewController.xib */,
+				84B6CC5E22E83FE9008E9392 /* SecondFloorFirstViewController.swift */,
+				84B6CC5F22E83FE9008E9392 /* SecondFloorFirstViewController.xib */,
+				84B6CC6222E83FFD008E9392 /* SecondFloorSecondViewController.swift */,
+				84B6CC6322E83FFD008E9392 /* SecondFloorSecondViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		84D68FF922E01B3400D30E95 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +269,7 @@
 				84D68FF222DEC2A700D30E95 /* SliderTransitionAnimation.swift */,
 				840AD7EA22E15E1D005C9ECC /* OpenDoorTranstionAnimation.swift */,
 				84B36ECD22E55ED400AA4C8D /* OpenMiddleTranstionAnimation.swift */,
+				848BBFE522E7FA6D00454902 /* SecondFloorTransitionAnimation.swift */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -302,10 +379,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				845D4D4A22D7226C00B67C42 /* LaunchScreen.storyboard in Resources */,
+				848BC00122E83EDD00454902 /* OpenDoorSecondViewController.xib in Resources */,
+				848BBFFD22E83ECC00454902 /* OpenDoorFirstViewController.xib in Resources */,
 				84D68FF722DF03BC00D30E95 /* InteractiveViewController.xib in Resources */,
+				84B6CC6522E83FFD008E9392 /* SecondFloorSecondViewController.xib in Resources */,
+				848BBFF522E83CF300454902 /* SliderFirstViewController.xib in Resources */,
 				845D4D4722D7226C00B67C42 /* Assets.xcassets in Resources */,
+				848BBFE422E7F9D500454902 /* SecondFloorViewController.xib in Resources */,
+				848BBFF922E83EB900454902 /* SliderSecondViewController.xib in Resources */,
+				84B6CC6122E83FE9008E9392 /* SecondFloorFirstViewController.xib in Resources */,
+				848BBFF122E83CAF00454902 /* ScaleSecondViewController.xib in Resources */,
+				848BBFED22E83C9A00454902 /* ScaleFristViewController.xib in Resources */,
+				848BC00922E83F9D00454902 /* OpenMiddleSecondViewController.xib in Resources */,
 				845D4D7B22D7303600B67C42 /* TestViewController.xib in Resources */,
 				84B36ED222E5653300AA4C8D /* DoorViewController.xib in Resources */,
+				848BC00522E83F2900454902 /* OpenMiddleFirstViewController.xib in Resources */,
 				845D4D4522D7226B00B67C42 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,19 +421,31 @@
 			files = (
 				84B36ED122E5653300AA4C8D /* DoorViewController.swift in Sources */,
 				845D4D7522D7230A00B67C42 /* FSInteractiveTransition.swift in Sources */,
+				848BBFF822E83EB900454902 /* SliderSecondViewController.swift in Sources */,
 				845D4D6F22D722A900B67C42 /* FSTransitionExtension.swift in Sources */,
+				848BC00822E83F9D00454902 /* OpenMiddleSecondViewController.swift in Sources */,
 				84D68FF622DF03BC00D30E95 /* InteractiveViewController.swift in Sources */,
+				848BC00022E83EDD00454902 /* OpenDoorSecondViewController.swift in Sources */,
+				848BC00422E83F2900454902 /* OpenMiddleFirstViewController.swift in Sources */,
 				848BBFE022E5877C00454902 /* FSInteractiveTransitionRecognizer.swift in Sources */,
 				845D4D7E22D7308D00B67C42 /* ScaleTransitionAnimation.swift in Sources */,
 				845D4D7A22D7303600B67C42 /* TestViewController.swift in Sources */,
+				848BBFE322E7F9D500454902 /* SecondFloorViewController.swift in Sources */,
+				84B6CC6022E83FE9008E9392 /* SecondFloorFirstViewController.swift in Sources */,
+				848BBFEC22E83C9A00454902 /* ScaleFristViewController.swift in Sources */,
 				845D4D4222D7226B00B67C42 /* ViewController.swift in Sources */,
 				840AD7EB22E15E1D005C9ECC /* OpenDoorTranstionAnimation.swift in Sources */,
 				84D68FF322DEC2A700D30E95 /* SliderTransitionAnimation.swift in Sources */,
+				848BBFF422E83CF300454902 /* SliderFirstViewController.swift in Sources */,
 				845D4D4022D7226B00B67C42 /* AppDelegate.swift in Sources */,
+				848BBFE622E7FA6D00454902 /* SecondFloorTransitionAnimation.swift in Sources */,
 				845D4D7322D722F700B67C42 /* FSTransitionAnimation.swift in Sources */,
 				845D4D7722D7269C00B67C42 /* FSTransitionAnimationProtocol.swift in Sources */,
+				84B6CC6422E83FFD008E9392 /* SecondFloorSecondViewController.swift in Sources */,
 				845D4D7122D722DE00B67C42 /* FSTransitionManager.swift in Sources */,
+				848BBFF022E83CAF00454902 /* ScaleSecondViewController.swift in Sources */,
 				84B36ECE22E55ED400AA4C8D /* OpenMiddleTranstionAnimation.swift in Sources */,
+				848BBFFC22E83ECC00454902 /* OpenDoorFirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

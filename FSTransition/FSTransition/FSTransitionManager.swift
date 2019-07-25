@@ -22,11 +22,14 @@ open class FSTransitionManager: NSObject, UIViewControllerTransitioningDelegate,
         animation.animationBlock = { [weak self] context in
             guard let fromView = context.view(forKey: .from) else{return}
             guard let toView = context.view(forKey: .to) else {return}//即将显示的视图
+            
             let containerView = context.containerView
             self?.animation.setToAnimation(fromView, toView: toView, containerView: containerView, animationComplete: {
                 if context.transitionWasCancelled == true{
+                    toView.removeFromSuperview()
                     containerView.addSubview(fromView)
                 }else{
+                    fromView.removeFromSuperview()
                     containerView.addSubview(toView)
                 }
                 context.completeTransition(!context.transitionWasCancelled)

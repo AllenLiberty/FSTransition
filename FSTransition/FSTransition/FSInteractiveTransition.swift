@@ -14,30 +14,44 @@ class FSInteractiveTransition: UIPercentDrivenInteractiveTransition{
     public var eventBlock: (() -> ())?
     private weak var gestureView: UIView?
     
-    func addEdgePageGesture(_ view: UIView, direction: TransitionDirection){
+    func addEdgePageGesture(_ view: UIView, direction: [TransitionDirection]){
         let recognizer = InteractiveTransitionRecognizer.init(target: self, action: #selector(handlePopRecognizer(_:)))
-        recognizer.direction = direction
+        recognizer.directions = direction
         gestureView = view
-        
         view.addGestureRecognizer(recognizer)
     }
     
     @objc func handlePopRecognizer(_ recognizer: InteractiveTransitionRecognizer){
         var progress:Float = 0.0
+        
         switch recognizer.direction {
         case .left, .right:
+            print("xxxxx:\(recognizer.translation(in: gestureView!).x)")
             progress = fabsf(Float(recognizer.translation(in: gestureView!).x)) / Float(gestureView!.bounds.width)
+            break
         case .top, .bottom:
             progress = fabsf(Float(recognizer.translation(in: gestureView!).y)) / Float(gestureView!.bounds.width)
+            break
         case .leftOffset(let offset):
-            let point = recognizer.translation(in: gestureView!).x
             progress = Float(recognizer.translation(in: gestureView!).x - offset) / Float(gestureView!.bounds.width - offset)
+            progress = 1 + progress
+            break
         case .rightOffset(let offset):
             progress = Float(recognizer.translation(in: gestureView!).x) / Float(gestureView!.bounds.width - offset)
             progress = progress > 0 ? 0 : -progress
-        default:
+            break
+        case .topOffset(let topset):
+            progress = fabsf(Float(recognizer.translation(in: gestureView!).y)) / Float(gestureView!.bounds.width - topset)
+            break
+        case .bottomOffset(let bottomset):
+            let yyyy = recognizer.translation(in: gestureView!).y
+            progress = fabsf(Float(recognizer.translation(in: gestureView!).y)) / Float(gestureView!.bounds.width - bottomset)
+            print("yyyy:\(yyyy)")
+            
             break
         }
+        
+        print("progress: \(progress)")
         progress = min(1.0, max(0.0, progress))
         switch recognizer.state {
         case .began:

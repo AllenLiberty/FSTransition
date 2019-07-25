@@ -12,33 +12,31 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.fs_registerToInteractiveTransition(.leftOffset(200)) { [weak self] in
-            let animation = OpenDoorTranstionAnimation()
-            let vc = InteractiveViewController.init(nibName: "InteractiveViewController", bundle: nil)
-            self?.fs_presentViewController(vc, animation: animation)
-        }
     }
 
-    @IBAction func onPushAnimation(_ sender: Any) {
-        let animation = SliderTransitionAnimation()
-        let vc = TestViewController.init(nibName: "TestViewController", bundle: nil)
-        self.fs_pushViewController(vc, animation: animation)
-    }
-    
-    @IBAction func onPushNormal(_ sender: Any) {
-        let vc = TestViewController.init(nibName: "TestViewController", bundle: nil)
+    @IBAction func onScale(_ sender: Any){
+        let vc = ScaleFristViewController.init(nibName: "ScaleFristViewController", bundle: nil)
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    @IBAction func onPresentAnimation(_ sender: Any) {
-        let animation = ScaleTransitionAnimation()
-        let vc = TestViewController.init(nibName: "TestViewController", bundle: nil)
-        self.fs_presentViewController(vc, animation: animation)
+    @IBAction func onSlider(_ sender: Any) {
+        let vc = SliderFirstViewController.init(nibName: "SliderFirstViewController", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    @IBAction func onPresentNormal(_ sender: Any) {
-        let vc = TestViewController.init(nibName: "TestViewController", bundle: nil)
-        self.present(vc, animated: true, completion: nil)
+    @IBAction func onOpenDoor(_ sender: Any) {
+        let vc = OpenDoorFirstViewController.init(nibName: "OpenDoorFirstViewController", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func onOpenMiddle(_ sender: Any) {
+        let vc = OpenMiddleFirstViewController.init(nibName: "OpenMiddleFirstViewController", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func onSecondFloor(_ sender: Any) {
+        let vc = SecondFloorFirstViewController.init(nibName: "SecondFloorFirstViewController", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 

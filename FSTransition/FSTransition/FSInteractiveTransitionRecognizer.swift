@@ -8,10 +8,6 @@
 
 import UIKit
 
-//public struct TransitionDirection: OptionSet{
-//    
-//}
-
 public enum TransitionDirection {
     case left
     case right
@@ -24,13 +20,6 @@ public enum TransitionDirection {
 }
 
 open class InteractiveTransitionRecognizer: UIPanGestureRecognizer {
-    override public init(target: Any?, action: Selector?) {
-        super.init(target: target, action: action)
-        self.delegate = self
-    }
-
-    open var direction: TransitionDirection = .left
-    open var offset: CGFloat = 0.0
     private enum TransitionSwipeDirection {
         case toLeft
         case toRihgt
@@ -38,6 +27,15 @@ open class InteractiveTransitionRecognizer: UIPanGestureRecognizer {
         case toBottom
     }
     
+    override public init(target: Any?, action: Selector?) {
+        super.init(target: target, action: action)
+        self.delegate = self
+    }
+
+    open var directions: [ TransitionDirection ] = [.left]
+    open var offset: CGFloat = 0.0
+    
+    internal var direction: TransitionDirection = .left
     private func getSwipeDirection(_ recognizer: UIPanGestureRecognizer, view: UIView ) -> TransitionSwipeDirection {
         let position = recognizer.translation(in: view)
         let x = abs(Float(position.x))
@@ -78,16 +76,21 @@ open class InteractiveTransitionRecognizer: UIPanGestureRecognizer {
         case .rightOffset(let rightOffset):
             return ((point.x < (view.frame.width - rightOffset)) && (point.x > (view.frame.width - rightOffset - offSet))) && getSwipeDirection(self, view: view) == .toLeft
         case .topOffset(let topOffset):
-            return ((point.y > (view.frame.width - topOffset)) && (point.y < (view.frame.width - topOffset - offSet))) && getSwipeDirection(self, view: view) == .toBottom
+            return ((point.y > topOffset) && (point.y < topOffset + offSet)) && getSwipeDirection(self, view: view) == .toBottom
         case .bottomOffset(let bottomOffset):
-            return ((point.y > (view.frame.width - bottomOffset)) && (point.y < (view.frame.width - bottomOffset - offSet))) && getSwipeDirection(self, view: view) == .toTop
+            return ((point.y < (view.frame.width - bottomOffset)) && (point.y > (view.frame.width - bottomOffset - offSet))) && getSwipeDirection(self, view: view) == .toTop
         }
     }
 }
 
 extension InteractiveTransitionRecognizer: UIGestureRecognizerDelegate{
     public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
-        print("gestureRecognizerShouldBegin")
-        return recognizerShouldBegin(self.direction, gestureRecognizer: gestureRecognizer )
+        for direction in self.directions {
+            if recognizerShouldBegin(direction, gestureRecognizer: gestureRecognizer) == true{
+                self.direction = direction
+                return true
+            }
+        }
+        return false
     }
 }

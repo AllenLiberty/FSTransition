@@ -19,10 +19,10 @@ class OpenDoorTranstionAnimation: FSTransitionAnimationProtocol{
         containerView.layer.sublayerTransform = transform
         
         snapFromeView.layer.transform = CATransform3DIdentity
-        snapFromeView.layer.position = CGPoint(x: 0, y: 0)
-        snapFromeView.layer.anchorPoint = CGPoint(x: 0, y: 0)
+        snapFromeView.layer.position = CGPoint(x:containerView.frame.width , y: 0)
+        snapFromeView.layer.anchorPoint = CGPoint(x: 1, y: 0)
         UIView.animate(withDuration: 0.5, delay: 0, options: .curveLinear, animations: {
-            snapFromeView.layer.transform = CATransform3DMakeRotation(-.pi/2, 0, 1, 0)
+            snapFromeView.layer.transform = CATransform3DMakeRotation(.pi/2, 0, 1, 0)
         }) { (finish) in
             snapFromeView.removeFromSuperview()
             animationComplete()
@@ -38,9 +38,9 @@ class OpenDoorTranstionAnimation: FSTransitionAnimationProtocol{
         containerView.layer.sublayerTransform = transform
         
         
-        snapFromeView.layer.transform = CATransform3DMakeRotation(-.pi/2, 0, 1, 0)
-        snapFromeView.layer.position = CGPoint(x: 0, y: 0)
-        snapFromeView.layer.anchorPoint = CGPoint(x: 0, y: 0)
+        snapFromeView.layer.transform = CATransform3DMakeRotation(.pi/2, 0, 1, 0)
+        snapFromeView.layer.position = CGPoint(x:containerView.frame.width , y: 0)
+        snapFromeView.layer.anchorPoint = CGPoint(x: 1, y: 0)
         UIView.animate(withDuration: 0.5, delay: 0, options: .curveLinear, animations: {
             snapFromeView.layer.transform = CATransform3DIdentity
         }) { (finish) in
