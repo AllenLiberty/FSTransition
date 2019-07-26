@@ -14,6 +14,11 @@
 ```swift
 import UIKit
 class ScaleTransitionAnimation: FSTransitionAnimationProtocol {
+
+	var snapToView: UIView?
+    
+    var snapFromView: UIView?
+	
     func setToAnimation(_ fromView: UIView, toView: UIView, containerView: UIView, animationComplete: @escaping (() -> ())) {
         // 在这里完成你的进场动画  
     }
