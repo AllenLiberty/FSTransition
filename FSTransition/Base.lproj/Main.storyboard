@@ -68,6 +68,17 @@
                                     <action selector="onScale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="afj-1B-oKp"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Stb-FR-GTS">
+                                <rect key="frame" x="0.0" y="353" width="414" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="9EB-P0-Ndi"/>
+                                    <constraint firstAttribute="height" constant="40" id="a0o-hm-qDg"/>
+                                </constraints>
+                                <state key="normal" title="SecondFloor"/>
+                                <connections>
+                                    <action selector="pushCollection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pBu-cB-ZNd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -75,6 +86,7 @@
                             <constraint firstItem="Y2n-O5-qu7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9L3-uF-J1i"/>
                             <constraint firstItem="P5K-0U-9vJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Fkc-qf-ucE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Nqb-62-wbb" secondAttribute="trailing" id="G1Y-uW-791"/>
+                            <constraint firstItem="Stb-FR-GTS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="H7t-ih-JGl"/>
                             <constraint firstItem="2UX-wH-36Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LtD-mw-DDX"/>
                             <constraint firstItem="bt4-dn-2aS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="M5K-00-g5r"/>
                             <constraint firstItem="Y2n-O5-qu7" firstAttribute="top" secondItem="Nqb-62-wbb" secondAttribute="bottom" constant="8" id="NEd-xJ-nb3"/>
@@ -85,6 +97,8 @@
                             <constraint firstItem="2UX-wH-36Y" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="aAp-xr-rKf"/>
                             <constraint firstItem="bt4-dn-2aS" firstAttribute="top" secondItem="2UX-wH-36Y" secondAttribute="bottom" constant="8" id="bmY-ng-70v"/>
                             <constraint firstItem="2UX-wH-36Y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="gid-MY-HPq"/>
+                            <constraint firstItem="Stb-FR-GTS" firstAttribute="top" secondItem="Y2n-O5-qu7" secondAttribute="bottom" constant="8" id="kcf-Z6-qRb"/>
+                            <constraint firstItem="Stb-FR-GTS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kgJ-Oy-2ie"/>
                             <constraint firstItem="P5K-0U-9vJ" firstAttribute="top" secondItem="bt4-dn-2aS" secondAttribute="bottom" constant="8" id="mrP-YO-3YW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

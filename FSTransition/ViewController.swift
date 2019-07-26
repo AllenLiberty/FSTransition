@@ -38,5 +38,10 @@ class ViewController: UIViewController {
         let vc = SecondFloorFirstViewController.init(nibName: "SecondFloorFirstViewController", bundle: nil)
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    @IBAction func pushCollection(_ sender: Any) {
+        let vc = CollectionFirstViewController.init(nibName: "CollectionFirstViewController", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 

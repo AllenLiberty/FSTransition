@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionViewCell" customModule="FSTransition" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="180" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="180" height="200"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lpR-Tc-7ln">
+                        <rect key="frame" x="0.0" y="0.0" width="180" height="200"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nymph" translatesAutoresizingMaskIntoConstraints="NO" id="cKh-nI-Xig">
+                                <rect key="frame" x="0.0" y="0.0" width="180" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="rPI-hW-aUY"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="刘亦菲 美籍华人，中国女演员，毕业于北京电影学院表演系2002级本科班。2002年，主演电视剧《金粉世家》进入演艺圈" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NpY-dg-BnJ">
+                                <rect key="frame" x="8" y="128" width="164" height="64"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cKh-nI-Xig" firstAttribute="leading" secondItem="lpR-Tc-7ln" secondAttribute="leading" id="5Kw-Zs-Umd"/>
+                            <constraint firstItem="cKh-nI-Xig" firstAttribute="top" secondItem="lpR-Tc-7ln" secondAttribute="top" id="7yh-VO-EWU"/>
+                            <constraint firstItem="NpY-dg-BnJ" firstAttribute="leading" secondItem="lpR-Tc-7ln" secondAttribute="leading" constant="8" id="NTl-qI-3bi"/>
+                            <constraint firstAttribute="trailing" secondItem="NpY-dg-BnJ" secondAttribute="trailing" constant="8" id="StZ-Cb-58V"/>
+                            <constraint firstItem="NpY-dg-BnJ" firstAttribute="top" secondItem="cKh-nI-Xig" secondAttribute="bottom" constant="8" id="WAd-Yv-WX4"/>
+                            <constraint firstAttribute="bottom" secondItem="NpY-dg-BnJ" secondAttribute="bottom" constant="8" id="eBq-cb-LHc"/>
+                            <constraint firstAttribute="trailing" secondItem="cKh-nI-Xig" secondAttribute="trailing" id="mjs-qE-637"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="lpR-Tc-7ln" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="4Bg-DJ-Oep"/>
+                <constraint firstAttribute="bottom" secondItem="lpR-Tc-7ln" secondAttribute="bottom" id="BgO-fo-txt"/>
+                <constraint firstItem="lpR-Tc-7ln" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="gjL-Kb-46v"/>
+                <constraint firstAttribute="trailing" secondItem="lpR-Tc-7ln" secondAttribute="trailing" id="iZk-l5-rSg"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="147" height="164"/>
+            <point key="canvasLocation" x="207.24637681159422" y="58.258928571428569"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="nymph" width="296" height="405.66665649414062"/>
+    </resources>
+</document>
