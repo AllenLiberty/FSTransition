@@ -9,29 +9,34 @@
 import UIKit
 
 class ScaleTransitionAnimation: FSTransitionAnimationProtocol {
+    
+    var snapToView: UIView?
+    
+    var snapFromView: UIView?
+    
     func setToAnimation(_ fromView: UIView, toView: UIView, containerView: UIView, animationComplete:@escaping (() -> ())) {
-        guard let snapFromView = fromView.resizableSnapshotView(from: fromView.bounds, afterScreenUpdates: true, withCapInsets: .zero) else { return }
-        containerView.addSubview(toView)
+        guard let snapToView = snapToView else { return }
+        guard let snapFromView = snapFromView else { return }
+        containerView.addSubview(snapToView)
         containerView.addSubview(snapFromView)
-        snapFromView.transform = CGAffineTransform.identity
+        snapFromView.layer.transform = CATransform3DIdentity
         
         UIView.animate(withDuration: 0.6, animations: {
-            snapFromView.transform = CGAffineTransform.init(scaleX: 0.01, y: 0.01)
+            snapFromView.layer.transform = CATransform3DMakeScale(0.1, 0.1, 1)
         }) { (finish) in
-            snapFromView.removeFromSuperview()
             animationComplete()
         }
     }
     
     func backToAnimation(_ fromView: UIView, toView: UIView, containerView: UIView, animationComplete:@escaping (() -> ())) {
-        guard let snapToView = toView.resizableSnapshotView(from: toView.bounds, afterScreenUpdates: true, withCapInsets: .zero) else { return }
-        containerView.addSubview(fromView)
+        guard let snapToView = snapToView else { return }
+        guard let snapFromView = snapFromView else { return }
+        containerView.addSubview(snapFromView)
         containerView.addSubview(snapToView)
-        snapToView.transform = CGAffineTransform.init(scaleX: 0.01, y: 0.01)
+        snapToView.layer.transform = CATransform3DMakeScale(0.1, 0.1, 1)
         UIView.animate(withDuration: 0.6, animations: {
-            snapToView.transform = CGAffineTransform.identity
+            snapToView.layer.transform = CATransform3DIdentity
         }) { (finish) in
-            snapToView.removeFromSuperview()
             animationComplete()
         }
     }

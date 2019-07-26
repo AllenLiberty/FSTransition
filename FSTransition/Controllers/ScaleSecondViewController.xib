@@ -20,7 +20,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wangzuxian" translatesAutoresizingMaskIntoConstraints="NO" id="fEb-Dt-LK4">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dilireba" translatesAutoresizingMaskIntoConstraints="NO" id="fEb-Dt-LK4">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHu-P6-R6b">
@@ -45,6 +45,6 @@
         </view>
     </objects>
     <resources>
-        <image name="wangzuxian" width="147.66667175292969" height="247"/>
+        <image name="dilireba" width="56.666667938232422" height="98.666664123535156"/>
     </resources>
 </document>

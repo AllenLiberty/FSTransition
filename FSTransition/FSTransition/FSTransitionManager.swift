@@ -23,7 +23,13 @@ open class FSTransitionManager: NSObject, UIViewControllerTransitioningDelegate,
             guard let fromView = context.view(forKey: .from) else{return}
             guard let toView = context.view(forKey: .to) else {return}//即将显示的视图
             let containerView = context.containerView
+            guard let snapToView = toView.snapshotView(afterScreenUpdates: true) else { return }
+            guard let snapFromView = fromView.snapshotView(afterScreenUpdates: true) else { return }
+            self?.animation.snapFromView = snapFromView
+            self?.animation.snapToView = snapToView
             self?.animation.setToAnimation(fromView, toView: toView, containerView: containerView, animationComplete: {
+                snapToView.removeFromSuperview()
+                snapFromView.removeFromSuperview()
                 if context.transitionWasCancelled == true{
                     toView.removeFromSuperview()
                     containerView.addSubview(fromView)
@@ -43,7 +49,13 @@ open class FSTransitionManager: NSObject, UIViewControllerTransitioningDelegate,
             guard let fromView = context.view(forKey: .from) else{return}
             guard let toView = context.view(forKey: .to) else {return}//即将显示的视图
             let containerView = context.containerView
+            guard let snapToView = toView.snapshotView(afterScreenUpdates: true) else { return }
+            guard let snapFromView = fromView.snapshotView(afterScreenUpdates: true) else { return }
+            self?.animation.snapFromView = snapFromView
+            self?.animation.snapToView = snapToView
             self?.animation.backToAnimation(fromView, toView: toView, containerView: containerView, animationComplete: {
+                snapToView.removeFromSuperview()
+                snapFromView.removeFromSuperview()
                 if context.transitionWasCancelled == true{
                     containerView.addSubview(fromView)
                 }else{

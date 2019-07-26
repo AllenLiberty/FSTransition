@@ -20,7 +20,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="aaa" translatesAutoresizingMaskIntoConstraints="NO" id="0fU-uQ-sCk">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tangwei" translatesAutoresizingMaskIntoConstraints="NO" id="0fU-uQ-sCk">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
@@ -31,6 +31,6 @@
         </view>
     </objects>
     <resources>
-        <image name="aaa" width="62.333332061767578" height="90"/>
+        <image name="tangwei" width="166.66667175292969" height="222.33332824707031"/>
     </resources>
 </document>

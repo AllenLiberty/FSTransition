@@ -12,13 +12,23 @@ class OpenDoorFirstViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        
         fs_registerToInteractiveTransition([.left]) {[weak self] in
             let animation = OpenDoorTranstionAnimation()
             let vc = OpenDoorSecondViewController.init(nibName: "OpenDoorSecondViewController", bundle: nil)
             self?.fs_pushViewController(vc, animation: animation)
         }
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = true
     }
     @IBAction func onBack(_ sender: Any) {
         navigationController?.popViewController(animated: true)

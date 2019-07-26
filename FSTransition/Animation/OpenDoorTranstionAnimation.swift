@@ -9,9 +9,13 @@
 import UIKit
 
 class OpenDoorTranstionAnimation: FSTransitionAnimationProtocol{
+    var snapToView: UIView?
+    
+    var snapFromView: UIView?
+    
     func setToAnimation(_ fromView: UIView, toView: UIView, containerView: UIView, animationComplete: @escaping (() -> ())) {
-        guard let snapFromView = fromView.resizableSnapshotView(from: fromView.bounds, afterScreenUpdates: true, withCapInsets: .zero) else { return }
-        guard let snapToView = toView.resizableSnapshotView(from: fromView.bounds, afterScreenUpdates: true, withCapInsets: .zero) else { return }
+        guard let snapToView = snapToView else { return }
+        guard let snapFromView = snapFromView else { return }
         
         containerView.addSubview(snapToView)
         containerView.addSubview(snapFromView)
@@ -26,16 +30,14 @@ class OpenDoorTranstionAnimation: FSTransitionAnimationProtocol{
         UIView.animate(withDuration: 0.5, delay: 0, options: .curveLinear, animations: {
             snapFromView.layer.transform = CATransform3DMakeRotation(.pi/2, 0, 1, 0)
         }) { (finish) in
-            snapToView.removeFromSuperview()
-            snapFromView.removeFromSuperview()
             animationComplete()
         }
     }
     
     func backToAnimation(_ fromView: UIView, toView: UIView, containerView: UIView, animationComplete: @escaping (() -> ())) {
         
-        guard let snapFromView = fromView.resizableSnapshotView(from: fromView.bounds, afterScreenUpdates: true, withCapInsets: .zero) else { return }
-        guard let snapToView = toView.resizableSnapshotView(from: fromView.bounds, afterScreenUpdates: true, withCapInsets: .zero) else { return }
+        guard let snapToView = snapToView else { return }
+        guard let snapFromView = snapFromView else { return }
         containerView.addSubview(snapFromView)
         containerView.addSubview(snapToView)
         snapToView.frame = containerView.bounds
@@ -49,8 +51,6 @@ class OpenDoorTranstionAnimation: FSTransitionAnimationProtocol{
         UIView.animate(withDuration: 0.5, delay: 0, options: .curveLinear, animations: {
             snapToView.layer.transform = CATransform3DIdentity
         }) { (finish) in
-            snapToView.removeFromSuperview()
-            snapFromView.removeFromSuperview()
             animationComplete()
         }
     }

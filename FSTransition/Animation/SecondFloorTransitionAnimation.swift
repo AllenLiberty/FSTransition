@@ -9,6 +9,10 @@
 import UIKit
 
 class SecondFloorTransitionAnimation: FSTransitionAnimationProtocol {
+    var snapToView: UIView?
+    
+    var snapFromView: UIView?
+    
     
     var topOffset: CGFloat = 0.0
     
@@ -24,7 +28,7 @@ class SecondFloorTransitionAnimation: FSTransitionAnimationProtocol {
         let bottomFrame = CGRect(x: 0, y: topOffset, width: fromView.frame.width, height: fromView.frame.height - topOffset)
         guard let topView = fromView.resizableSnapshotView(from: topFrame, afterScreenUpdates: true, withCapInsets: .zero) else { return }
         guard let bottomView = fromView.resizableSnapshotView(from: bottomFrame, afterScreenUpdates: true, withCapInsets: .zero) else { return }
-        guard let snapToView = toView.resizableSnapshotView(from: toView.bounds, afterScreenUpdates: true, withCapInsets: .zero) else {return}
+        guard let snapToView = snapToView else {return}
         self.topView = topView
         self.bottomView = bottomView
         containerView.addSubview(snapToView)
@@ -52,7 +56,7 @@ class SecondFloorTransitionAnimation: FSTransitionAnimationProtocol {
         let bottomFrame = CGRect(x: 0, y: topOffset, width: fromView.frame.width, height: fromView.frame.height - topOffset)
         guard let topView = topView else { return }
         guard let bottomView = bottomView else { return }
-        guard let snapFromView = fromView.resizableSnapshotView(from: fromView.bounds, afterScreenUpdates: true, withCapInsets: .zero) else {return}
+        guard let snapFromView = snapFromView else {return}
         
         containerView.addSubview(snapFromView)
         containerView.addSubview(topView)

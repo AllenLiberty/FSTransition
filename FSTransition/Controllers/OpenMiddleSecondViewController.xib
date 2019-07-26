@@ -20,7 +20,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aAAA" translatesAutoresizingMaskIntoConstraints="NO" id="RFa-VV-vXc">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gulinazha" translatesAutoresizingMaskIntoConstraints="NO" id="RFa-VV-vXc">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 </imageView>
             </subviews>
@@ -36,6 +36,6 @@
         </view>
     </objects>
     <resources>
-        <image name="aAAA" width="59.666667938232422" height="93.666664123535156"/>
+        <image name="gulinazha" width="240" height="331"/>
     </resources>
 </document>
