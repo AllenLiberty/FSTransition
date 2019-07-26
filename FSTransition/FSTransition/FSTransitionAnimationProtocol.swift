@@ -15,9 +15,3 @@ public protocol FSTransitionAnimationProtocol {
     func setToAnimation(_ fromView: UIView, toView:UIView, containerView:UIView, animationComplete: @escaping (()->()))
     func backToAnimation(_ fromView: UIView, toView:UIView, containerView:UIView, animationComplete: @escaping (()->()))
 }
-
-extension FSTransitionAnimationProtocol{
-    var snapToView: UIView {
-        return UIView()
-    }
-}
