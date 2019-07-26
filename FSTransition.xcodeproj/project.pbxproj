@@ -176,7 +176,6 @@
 				845D4D4122D7226B00B67C42 /* ViewController.swift */,
 				845D4D4322D7226B00B67C42 /* Main.storyboard */,
 				848BBFE722E83C1C00454902 /* Controllers */,
-				84D68FF922E01B3400D30E95 /* Animation */,
 				845D4D6D22D7228700B67C42 /* FSTransition */,
 				845D4D7C22D7304000B67C42 /* Support */,
 			);
@@ -228,26 +227,80 @@
 		848BBFE722E83C1C00454902 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				84B6CC7E22EADD3C008E9392 /* Collection */,
+				84B6CC7D22EADD27008E9392 /* SecondFloor */,
+				84B6CC7C22EADD0F008E9392 /* OpenMiddle */,
+				84B6CC7B22EADCEF008E9392 /* OpenDoor */,
+				84B6CC7922EADCAC008E9392 /* Scale */,
+				84B6CC7A22EADCCE008E9392 /* Slider */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		84B6CC7922EADCAC008E9392 /* Scale */ = {
+			isa = PBXGroup;
+			children = (
+				845D4D7D22D7308D00B67C42 /* ScaleTransitionAnimation.swift */,
 				848BBFEA22E83C9A00454902 /* ScaleFristViewController.swift */,
 				848BBFEB22E83C9A00454902 /* ScaleFristViewController.xib */,
 				848BBFEE22E83CAF00454902 /* ScaleSecondViewController.swift */,
 				848BBFEF22E83CAF00454902 /* ScaleSecondViewController.xib */,
+			);
+			path = Scale;
+			sourceTree = "<group>";
+		};
+		84B6CC7A22EADCCE008E9392 /* Slider */ = {
+			isa = PBXGroup;
+			children = (
+				84D68FF222DEC2A700D30E95 /* SliderTransitionAnimation.swift */,
 				848BBFF222E83CF300454902 /* SliderFirstViewController.swift */,
 				848BBFF322E83CF300454902 /* SliderFirstViewController.xib */,
 				848BBFF622E83EB900454902 /* SliderSecondViewController.swift */,
 				848BBFF722E83EB900454902 /* SliderSecondViewController.xib */,
+			);
+			path = Slider;
+			sourceTree = "<group>";
+		};
+		84B6CC7B22EADCEF008E9392 /* OpenDoor */ = {
+			isa = PBXGroup;
+			children = (
+				840AD7EA22E15E1D005C9ECC /* OpenDoorTranstionAnimation.swift */,
 				848BBFFA22E83ECC00454902 /* OpenDoorFirstViewController.swift */,
 				848BBFFB22E83ECC00454902 /* OpenDoorFirstViewController.xib */,
 				848BBFFE22E83EDD00454902 /* OpenDoorSecondViewController.swift */,
 				848BBFFF22E83EDD00454902 /* OpenDoorSecondViewController.xib */,
+			);
+			path = OpenDoor;
+			sourceTree = "<group>";
+		};
+		84B6CC7C22EADD0F008E9392 /* OpenMiddle */ = {
+			isa = PBXGroup;
+			children = (
+				84B36ECD22E55ED400AA4C8D /* OpenMiddleTranstionAnimation.swift */,
 				848BC00222E83F2900454902 /* OpenMiddleFirstViewController.swift */,
 				848BC00322E83F2900454902 /* OpenMiddleFirstViewController.xib */,
 				848BC00622E83F9D00454902 /* OpenMiddleSecondViewController.swift */,
 				848BC00722E83F9D00454902 /* OpenMiddleSecondViewController.xib */,
+			);
+			path = OpenMiddle;
+			sourceTree = "<group>";
+		};
+		84B6CC7D22EADD27008E9392 /* SecondFloor */ = {
+			isa = PBXGroup;
+			children = (
+				848BBFE522E7FA6D00454902 /* SecondFloorTransitionAnimation.swift */,
 				84B6CC5E22E83FE9008E9392 /* SecondFloorFirstViewController.swift */,
 				84B6CC5F22E83FE9008E9392 /* SecondFloorFirstViewController.xib */,
 				84B6CC6222E83FFD008E9392 /* SecondFloorSecondViewController.swift */,
 				84B6CC6322E83FFD008E9392 /* SecondFloorSecondViewController.xib */,
+			);
+			path = SecondFloor;
+			sourceTree = "<group>";
+		};
+		84B6CC7E22EADD3C008E9392 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				84B6CC7722EAB363008E9392 /* CollectionTransitionAnimation.swift */,
 				84B6CC6B22EAA88E008E9392 /* CollectionFirstViewController.swift */,
 				84B6CC6C22EAA88E008E9392 /* CollectionFirstViewController.xib */,
 				84B6CC6F22EAA8A2008E9392 /* CollectionSecondViewController.swift */,
@@ -255,20 +308,7 @@
 				84B6CC7322EAAE29008E9392 /* CollectionViewCell.swift */,
 				84B6CC7422EAAE29008E9392 /* CollectionViewCell.xib */,
 			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		84D68FF922E01B3400D30E95 /* Animation */ = {
-			isa = PBXGroup;
-			children = (
-				845D4D7D22D7308D00B67C42 /* ScaleTransitionAnimation.swift */,
-				84D68FF222DEC2A700D30E95 /* SliderTransitionAnimation.swift */,
-				840AD7EA22E15E1D005C9ECC /* OpenDoorTranstionAnimation.swift */,
-				84B36ECD22E55ED400AA4C8D /* OpenMiddleTranstionAnimation.swift */,
-				848BBFE522E7FA6D00454902 /* SecondFloorTransitionAnimation.swift */,
-				84B6CC7722EAB363008E9392 /* CollectionTransitionAnimation.swift */,
-			);
-			path = Animation;
+			path = Collection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
