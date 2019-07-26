@@ -6,6 +6,7 @@
 
 ### 结果演示
 ![markdown](https://github.com/AllenLiberty/resource/blob/master/2019-07-26%2016-38-50.2019-07-26%2016_42_25.2019-07-26%2017_02_56.gif)!
+![markdown](https://github.com/AllenLiberty/resource/blob/master/2019-07-26%2016-43-48.2019-07-26%2016_46_32.2019-07-26%2017_04_13.gif)!
 
 ### 使用
 #### 1. 创建一个动画实现类 遵循FSTransitionAnimationProtocol协议
