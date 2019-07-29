@@ -74,7 +74,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="9EB-P0-Ndi"/>
                                     <constraint firstAttribute="height" constant="40" id="a0o-hm-qDg"/>
                                 </constraints>
-                                <state key="normal" title="SecondFloor"/>
+                                <state key="normal" title="Collection"/>
                                 <connections>
                                     <action selector="pushCollection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pBu-cB-ZNd"/>
                                 </connections>
