@@ -15,7 +15,7 @@
 import UIKit
 class ScaleTransitionAnimation: FSTransitionAnimationProtocol {
 
-	var snapToView: UIView?
+    var snapToView: UIView?
     
     var snapFromView: UIView?
 	
@@ -35,20 +35,27 @@ import UIKit
 
 class ScaleTransitionAnimation: FSTransitionAnimationProtocol {
     func setToAnimation(_ fromView: UIView, toView: UIView, containerView: UIView, animationComplete:@escaping (() -> ())) {
-        containerView.addSubview(toView)
-        toView.transform = CGAffineTransform.init(scaleX: 0.01, y: 0.01)
+        guard let snapToView = snapToView else { return }
+        guard let snapFromView = snapFromView else { return }
+        containerView.addSubview(snapToView)
+        containerView.addSubview(snapFromView)
+        snapFromView.layer.transform = CATransform3DIdentity
+        
         UIView.animate(withDuration: 0.6, animations: {
-            toView.transform = CGAffineTransform.identity
+            snapFromView.layer.transform = CATransform3DMakeScale(0.1, 0.1, 1)
         }) { (finish) in
             animationComplete()
         }
     }
     
     func backToAnimation(_ fromView: UIView, toView: UIView, containerView: UIView, animationComplete:@escaping (() -> ())) {
-        containerView.addSubview(toView)
-        containerView.addSubview(fromView)
+        guard let snapToView = snapToView else { return }
+        guard let snapFromView = snapFromView else { return }
+        containerView.addSubview(snapFromView)
+        containerView.addSubview(snapToView)
+        snapToView.layer.transform = CATransform3DMakeScale(0.1, 0.1, 1)
         UIView.animate(withDuration: 0.6, animations: {
-            fromView.transform = CGAffineTransform.init(scaleX: 0.01, y: 0.01)
+            snapToView.layer.transform = CATransform3DIdentity
         }) { (finish) in
             animationComplete()
         }
@@ -56,24 +63,24 @@ class ScaleTransitionAnimation: FSTransitionAnimationProtocol {
 }
 ```
 
-#### 2. 外部调用
-##### 2.1  非手势转场调用
+### 2. 外部调用
+#### 2.1  非手势转场调用
 ```swift
  @IBAction func onPushAnimation(_ sender: Any) {
         let animation = ScaleTransitionAnimation()
-        let vc = TestViewController.init(nibName: "TestViewController", bundle: nil)
+        let vc = ScaleSecondViewController.init(nibName: "ScaleSecondViewController", bundle: nil)
         self.fs_pushViewController(vc, animation: animation)
     }
 ```
-##### 2.2  手势转场调用
+#### 2.2  手势转场调用
 注册手势转场
 ```swift
 override func viewDidLoad() {
         super.viewDidLoad()
-        self.fs_registerToInteractiveTransition(.right) {[weak self] in
-            let animation = SliderTransitionAnimation()
-            let vc = InteractiveViewController.init(nibName: "InteractiveViewController", bundle: nil)
-            self?.fs_presentViewController(vc, animation: animation)
+        fs_registerToInteractiveTransition([.left]) {[weak self] in
+            let animation = OpenDoorTranstionAnimation()
+            let vc = OpenDoorSecondViewController.init(nibName: "OpenDoorSecondViewController", bundle: nil)
+            self?.fs_pushViewController(vc, animation: animation)
         }
     }
 ```
@@ -82,12 +89,34 @@ override func viewDidLoad() {
 class InteractiveViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        fs_registerBackInteractiveTransition(UIRectEdge.left) {[weak self] in
-            self?.dismiss(animated: true, completion: nil)
-            }
+        fs_registerBackInteractiveTransition([.right]) {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
 }
 ```
+#### 2.3  手势转场设置手势响应区域
+想要在中间区域 响应手势的时候 我们需要设置  .leftOffset( CGFloat ) 
+```swift
+override func viewDidLoad() {
+        super.viewDidLoad()
+        fs_registerToInteractiveTransition([.leftOffset(view.frame.width / 2.0), .rightOffset(view.frame.width / 2.0)]) {
+            let animation = OpenMiddleTranstionAnimation()
+            let vc = OpenMiddleSecondViewController.init(nibName: "OpenMiddleSecondViewController", bundle: nil)
+            self.fs_pushViewController(vc, animation: animation)
+        }
+    }
+```
+注册左右两边区域为返回的响应区域
+```swift
+override func viewDidLoad() {
+        super.viewDidLoad()
+       fs_registerBackInteractiveTransition([.left, .right]) {
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
+```
+
 
 
 
