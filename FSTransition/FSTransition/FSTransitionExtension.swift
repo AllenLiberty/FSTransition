@@ -9,7 +9,13 @@
 import UIKit
 
 public extension UIViewController {
-    func fs_pushViewController<T: FSTransitionAnimationProtocol>(_ viewController:UIViewController, animation:T) {
+    
+    /// push viewController with your custom animation
+    ///
+    /// - Parameters:
+    ///   - viewController: the controller will be appear
+    ///   - animation: custom animation
+    func fs_pushViewController<T: FSTransitionAnimationProtocol>(_ viewController: UIViewController, animation:T) {
         guard let naviationController = self.navigationController else { return }
         let transitionManager = FSTransitionManager.init(animation)
         naviationController.delegate = transitionManager
@@ -20,7 +26,7 @@ public extension UIViewController {
         naviationController.pushViewController(viewController, animated: true)
     }
     
-    func fs_presentViewController<T: FSTransitionAnimationProtocol>(_ viewController:UIViewController, animation:T) {
+    func fs_presentViewController<T: FSTransitionAnimationProtocol>(_ viewController: UIViewController, animation:T) {
         let transitionManager = FSTransitionManager.init(animation)
         viewController.transitioningDelegate = transitionManager;
         objc_setAssociatedObject(viewController, kAnimationKey, transitionManager, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
@@ -30,38 +36,37 @@ public extension UIViewController {
         self.present(viewController, animated: true, completion: nil)
     }
     
-    func fs_registerToInteractiveTransition(_ derection: [TransitionDirection], block:@escaping (() -> ())) {
+    ///
+    /// - Parameters:
+    ///   - derection: the derections to response the gesture
+    ///   - view: the view to gesture the response if it's nil default the controller's view
+    ///   - block: called when recieve the gesture
+    func fs_registerToInteractiveTransition(_ derection: [TransitionDirection], view: UIView? = nil,responseOffset: CGFloat? = 40.0, block:@escaping (() -> ())) {
         let interactive = FSInteractiveTransition()
         interactive.eventBlock = block
-        interactive.addEdgePageGesture(self.view, direction: derection)
+        interactive.offset = responseOffset
+        interactive.addEdgePageGesture(view ?? self.view, direction: derection)
         objc_setAssociatedObject(self, kInteractiveKey, interactive, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         
     }
-    func fs_registerBackInteractiveTransition(_ derection: [TransitionDirection], block:@escaping (()->())){
+    
+    ///
+    /// - Parameters:
+    ///   - derection: the derections to response the gesture
+    ///   - block: called when recieve the gesture
+    func fs_registerBackInteractiveTransition(_ derection: [TransitionDirection], view: UIView? = nil,responseOffset: CGFloat? = 40.0, block:@escaping (()->())){
         let interactive = FSInteractiveTransition()
         interactive.eventBlock = block
-        interactive.addEdgePageGesture(self.view, direction: derection)
+        interactive.offset = responseOffset
+        interactive.addEdgePageGesture(view ?? self.view, direction: derection)
         if let transitionManager = objc_getAssociatedObject(self, kAnimationKey) as? FSTransitionManager{
             transitionManager.backInteractiveTransition = interactive
         }
     }
-}
-
-public extension UIView {
-    func snapshotView(_ rect:CGRect) -> UIImageView? {
-        UIGraphicsBeginImageContextWithOptions(bounds.size, false, 0.0)
-        let context = UIGraphicsGetCurrentContext()!
-        layer.render(in: context)
-        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        let scale = max(image.size.width / rect.width, image.size.height / rect.height)
-        let cropRect = CGRect(x: rect.origin.x * scale, y: rect.origin.y * scale, width: rect.width * scale, height: rect.height * scale)
-        if let imgRef = image.cgImage?.cropping(to: cropRect) {
-            
-            let img = UIImage(cgImage:imgRef)
-            return UIImageView.init(image: img)
+    
+    func fs_resignInteractiveTransition() {
+        if let interactive = objc_getAssociatedObject(self, kInteractiveKey) as? FSInteractiveTransition{
+            interactive.removeEdgePageGesture()
         }
-        
-        return UIImageView.init(image: image)
     }
 }

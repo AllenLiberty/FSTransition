@@ -40,8 +40,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func pushCollection(_ sender: Any) {
-        let vc = CollectionFirstViewController.init(nibName: "CollectionFirstViewController", bundle: nil)
+        let vc = ScrollViewFirstViewController.init(nibName: "ScrollViewFirstViewController", bundle: nil)
         self.navigationController?.pushViewController(vc, animated: true)
+//        let vc = CollectionFirstViewController.init(nibName: "CollectionFirstViewController", bundle: nil)
+//        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 

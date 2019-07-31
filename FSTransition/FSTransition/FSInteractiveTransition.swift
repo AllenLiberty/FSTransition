@@ -10,15 +10,25 @@ import UIKit
 
 class FSInteractiveTransition: UIPercentDrivenInteractiveTransition{
     
-    var isPanGestureIneration = false
     public var eventBlock: (() -> ())?
-    private weak var gestureView: UIView?
     
+    var offset: CGFloat?
+    var isPanGestureIneration = false
+    var recognizer: InteractiveTransitionRecognizer?
+    private weak var gestureView: UIView?
     func addEdgePageGesture(_ view: UIView, direction: [TransitionDirection]){
         let recognizer = InteractiveTransitionRecognizer.init(target: self, action: #selector(handlePopRecognizer(_:)))
         recognizer.directions = direction
+        recognizer.offSet = offset ?? 40.0
         gestureView = view
+        self.recognizer = recognizer
         view.addGestureRecognizer(recognizer)
+    }
+    
+    func removeEdgePageGesture() {
+        if let view = self.gestureView, let recognizer = self.recognizer {
+            view.removeGestureRecognizer(recognizer)
+        }
     }
     
     @objc func handlePopRecognizer(_ recognizer: InteractiveTransitionRecognizer){

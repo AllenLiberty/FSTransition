@@ -8,8 +8,8 @@
 
 import UIKit
 
-let kAnimationKey: UnsafeRawPointer = UnsafeRawPointer.init(bitPattern: "kAnimationKey".hashValue)!
-let kInteractiveKey: UnsafeRawPointer = UnsafeRawPointer.init(bitPattern: "kInteractiveKey".hashValue)!
+internal let kAnimationKey: UnsafeRawPointer = UnsafeRawPointer.init(bitPattern: "kAnimationKey".hashValue)!
+internal let kInteractiveKey: UnsafeRawPointer = UnsafeRawPointer.init(bitPattern: "kInteractiveKey".hashValue)!
 
 open class FSTransitionManager: NSObject, UIViewControllerTransitioningDelegate,UINavigationControllerDelegate{
     
