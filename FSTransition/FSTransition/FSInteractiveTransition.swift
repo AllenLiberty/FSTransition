@@ -15,6 +15,7 @@ class FSInteractiveTransition: UIPercentDrivenInteractiveTransition{
     var offset: CGFloat?
     var isPanGestureIneration = false
     var recognizer: InteractiveTransitionRecognizer?
+    var progress: Float = 0.5
     private weak var gestureView: UIView?
     func addEdgePageGesture(_ view: UIView, direction: [TransitionDirection]){
         let recognizer = InteractiveTransitionRecognizer.init(target: self, action: #selector(handlePopRecognizer(_:)))
@@ -32,11 +33,9 @@ class FSInteractiveTransition: UIPercentDrivenInteractiveTransition{
     }
     
     @objc func handlePopRecognizer(_ recognizer: InteractiveTransitionRecognizer){
-        var progress:Float = 0.0
-        
+        var progress: Float = 0.0
         switch recognizer.direction {
         case .left, .right:
-            print("xxxxx:\(recognizer.translation(in: gestureView!).x)")
             progress = fabsf(Float(recognizer.translation(in: gestureView!).x)) / Float(gestureView!.bounds.width)
             break
         case .top, .bottom:
@@ -54,10 +53,7 @@ class FSInteractiveTransition: UIPercentDrivenInteractiveTransition{
             progress = fabsf(Float(recognizer.translation(in: gestureView!).y)) / Float(gestureView!.bounds.height - topset)
             break
         case .bottomOffset(let bottomset):
-            let yyyy = recognizer.translation(in: gestureView!).y
             progress = fabsf(Float(recognizer.translation(in: gestureView!).y)) / Float(gestureView!.bounds.height - bottomset)
-            print("yyyy:\(yyyy)")
-            
             break
         }
         
@@ -74,7 +70,7 @@ class FSInteractiveTransition: UIPercentDrivenInteractiveTransition{
             break
         case .cancelled,.ended,.failed:
             isPanGestureIneration = false
-            if progress > 0.5{
+            if progress > self.progress{
                 finish()
             }else{
                 cancel()

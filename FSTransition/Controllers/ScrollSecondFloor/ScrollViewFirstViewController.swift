@@ -32,7 +32,7 @@ class ScrollViewFirstViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func registerTransition() {
-        fs_registerToInteractiveTransition([.top], view: contentView, responseOffset: view.frame.height) {[weak self] in
+        fs_registerToInteractiveTransition([.top], view: contentView, responseOffset: view.frame.height, progress: 0.3) {[weak self] in
             let animation = ScrollSecondFloorAnimation()
             let vc = ScrollViewSecondViewController.init(nibName: "ScrollViewSecondViewController", bundle: nil)
             self?.fs_pushViewController(vc, animation: animation)

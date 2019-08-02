@@ -24,7 +24,7 @@ open class InteractiveTransitionRecognizer: UIPanGestureRecognizer {
     /// make the array of directions of gesture
     open var directions: [ TransitionDirection ] = [.left]
     
-    /// make the respnse area  eg. when deiection content left or right the response area with == offSet. if deiection content top or bottom the response area height == offSet
+    /// make the response area  eg. when deiection content left or right the response area with == offSet. if deiection content top or bottom the response area height == offSet
     open var offSet: CGFloat = 40.0
     
     override public init(target: Any?, action: Selector?) {

@@ -8,7 +8,6 @@
 
 import UIKit
 
-///
 public protocol FSTransitionAnimationProtocol {
     
     /// the snap view of the first controller. it's better to use this view on your animation
