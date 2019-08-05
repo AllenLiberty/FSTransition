@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FSTransition'
-  s.version          = '1.2.1'
+  s.version          = '1.2.0'
   s.summary          = 'very easy to custum animation'
 
 # This description is used to generate tags and improve search results.
@@ -28,6 +28,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '10.0'
   s.source_files = 'FSTransition/**/*'
+
   
   # s.resource_bundles = {
   #   'FSTransition' => ['FSTransition/Assets/*.png']
