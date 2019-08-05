@@ -1,5 +1,5 @@
 PODS:
-  - FSTransition (1.0.0)
+  - FSTransition (1.2.0)
 
 DEPENDENCIES:
   - FSTransition (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FSTransition: a61b7b5d1e048fe75b0074e5e933bf9051c0bf3f
+  FSTransition: 539a7cc3ac7156227cc43c60885d218b369119b4
 
 PODFILE CHECKSUM: 60653adfadaf53c48c489b726c48267ddd74630a
 
