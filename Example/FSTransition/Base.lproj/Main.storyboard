@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WKA-el-hb4">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="FSTransition_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8zP-b7-PJ7">
+                                <rect key="frame" x="37.5" y="72" width="300" height="30"/>
+                                <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="gaD-pV-eEZ"/>
+                                    <constraint firstAttribute="height" constant="30" id="wiN-XV-Pzy"/>
+                                </constraints>
+                                <state key="normal" title="ScaleTransition"/>
+                                <connections>
+                                    <action selector="scaleTransition:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="N0x-DT-90B"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YpN-oJ-teh">
+                                <rect key="frame" x="37.5" y="110" width="300" height="30"/>
+                                <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3Zs-SV-0gw"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="Vz1-eE-zyU"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="dOg-9V-ioI"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="zRm-H3-wX2"/>
+                                </constraints>
+                                <state key="normal" title="SliderTransition"/>
+                                <connections>
+                                    <action selector="sliderTransition:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="u0i-ld-t0v"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rx8-Nf-QjC">
+                                <rect key="frame" x="37.5" y="148" width="300" height="30"/>
+                                <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="HUF-VN-Zqp"/>
+                                    <constraint firstAttribute="height" constant="30" id="fxB-hc-Txy"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="qGt-t2-G0C"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="uon-bL-PBR"/>
+                                </constraints>
+                                <state key="normal" title="CollectionTransition"/>
+                                <connections>
+                                    <action selector="collectionTransition:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="pyp-x7-mFD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCh-yP-6ka">
+                                <rect key="frame" x="37.5" y="186" width="300" height="30"/>
+                                <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="Pz4-im-DMV"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="bMO-K9-t97"/>
+                                    <constraint firstAttribute="height" constant="30" id="ovC-Wl-IUq"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="tsk-6c-EW7"/>
+                                </constraints>
+                                <state key="normal" title="OpenDoorTransition"/>
+                                <connections>
+                                    <action selector="openDoorTransition:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MZ8-QA-uk4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sw2-HR-EOq">
+                                <rect key="frame" x="37.5" y="224" width="300" height="30"/>
+                                <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="IQq-EP-gS9"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="mGZ-0F-3Yx"/>
+                                    <constraint firstAttribute="height" constant="30" id="qJK-Wi-Isv"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="tNs-sg-1QV"/>
+                                </constraints>
+                                <state key="normal" title="OpenMiddleTransition"/>
+                                <connections>
+                                    <action selector="openMiddleTransition:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="pul-Ed-Suk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0F-1W-14f">
+                                <rect key="frame" x="37.5" y="262" width="300" height="30"/>
+                                <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="38v-BZ-lGz"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="cEd-Tp-oBy"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="glZ-Zc-Xon"/>
+                                    <constraint firstAttribute="height" constant="30" id="hlU-gr-LzH"/>
+                                </constraints>
+                                <state key="normal" title="SecondFloorTransition"/>
+                                <connections>
+                                    <action selector="secondFloorTransition:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="o7O-7X-x6z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8s-U0-B4f">
+                                <rect key="frame" x="37.5" y="300" width="300" height="30"/>
+                                <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="5BV-GY-62e"/>
+                                    <constraint firstAttribute="height" constant="30" id="GBG-F3-k6E"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="H6a-72-Ba7"/>
+                                </constraints>
+                                <state key="normal" title="ScrollFloorTransition"/>
+                                <connections>
+                                    <action selector="scrollFloorTransition:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="PjR-iD-6oB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sw2-HR-EOq" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="1yk-yv-Ld4"/>
+                            <constraint firstItem="NCh-yP-6ka" firstAttribute="top" secondItem="Rx8-Nf-QjC" secondAttribute="bottom" constant="8" id="CPq-D0-sWL"/>
+                            <constraint firstItem="YpN-oJ-teh" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="DQO-nm-h1B"/>
+                            <constraint firstItem="n8s-U0-B4f" firstAttribute="top" secondItem="W0F-1W-14f" secondAttribute="bottom" constant="8" id="HWc-PR-Ai3"/>
+                            <constraint firstItem="W0F-1W-14f" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="Uiz-It-Fgc"/>
+                            <constraint firstItem="sw2-HR-EOq" firstAttribute="top" secondItem="NCh-yP-6ka" secondAttribute="bottom" constant="8" id="VJj-sk-FZ9"/>
+                            <constraint firstItem="8zP-b7-PJ7" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="ZQj-EW-H7c"/>
+                            <constraint firstItem="YpN-oJ-teh" firstAttribute="top" secondItem="8zP-b7-PJ7" secondAttribute="bottom" constant="8" id="cki-Mh-O8j"/>
+                            <constraint firstItem="W0F-1W-14f" firstAttribute="top" secondItem="sw2-HR-EOq" secondAttribute="bottom" constant="8" id="dok-q8-olI"/>
+                            <constraint firstItem="Rx8-Nf-QjC" firstAttribute="top" secondItem="YpN-oJ-teh" secondAttribute="bottom" constant="8" id="fqH-dJ-kd2"/>
+                            <constraint firstItem="Rx8-Nf-QjC" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="iRI-Tm-MMJ"/>
+                            <constraint firstItem="NCh-yP-6ka" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="lTb-0x-tbL"/>
+                            <constraint firstItem="8zP-b7-PJ7" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="pU3-XA-Gu6"/>
+                            <constraint firstItem="n8s-U0-B4f" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="uX9-Su-YOT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="mZ3-di-zxv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="132.68365817091455"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XTS-Nc-1Au">
+            <objects>
+                <navigationController id="WKA-el-hb4" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="t2i-8c-Usk">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="nRN-Ra-cxZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9cd-bJ-Ks8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-918" y="138"/>
+        </scene>
+    </scenes>
+</document>

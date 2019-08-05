@@ -1,0 +1,6 @@
+framework module FSTransition {
+  umbrella header "FSTransition-umbrella.h"
+
+  export *
+  module * { export * }
+}

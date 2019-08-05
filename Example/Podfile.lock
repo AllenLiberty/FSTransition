@@ -1,0 +1,16 @@
+PODS:
+  - FSTransition (0.1.0)
+
+DEPENDENCIES:
+  - FSTransition (from `../`)
+
+EXTERNAL SOURCES:
+  FSTransition:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FSTransition: 92590c4b9440f885ce304ef7e7222bd54c8ad28f
+
+PODFILE CHECKSUM: 60653adfadaf53c48c489b726c48267ddd74630a
+
+COCOAPODS: 1.7.5

@@ -1,0 +1,6 @@
+framework module Pods_FSTransition_Tests {
+  umbrella header "Pods-FSTransition_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'FSTransition_Example' do
+  pod 'FSTransition', :path => '../'
+
+  target 'FSTransition_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
