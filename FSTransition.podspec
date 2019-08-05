@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FSTransition'
-  s.version          = '1.0.0'
+  s.version          = '1.2.1'
   s.summary          = 'very easy to custum animation'
 
 # This description is used to generate tags and improve search results.
