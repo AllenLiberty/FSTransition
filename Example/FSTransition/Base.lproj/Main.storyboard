@@ -116,12 +116,26 @@
                                     <action selector="scrollFloorTransition:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="PjR-iD-6oB"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9qW-T2-ycx">
+                                <rect key="frame" x="37.5" y="338" width="300" height="30"/>
+                                <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="PPi-Tw-fK6"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="geW-Jn-ZBc"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="rKk-bM-UXG"/>
+                                </constraints>
+                                <state key="normal" title="WechatFloorTransition"/>
+                                <connections>
+                                    <action selector="wecharTransition:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="96U-na-3dV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="sw2-HR-EOq" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="1yk-yv-Ld4"/>
                             <constraint firstItem="NCh-yP-6ka" firstAttribute="top" secondItem="Rx8-Nf-QjC" secondAttribute="bottom" constant="8" id="CPq-D0-sWL"/>
                             <constraint firstItem="YpN-oJ-teh" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="DQO-nm-h1B"/>
+                            <constraint firstItem="9qW-T2-ycx" firstAttribute="top" secondItem="n8s-U0-B4f" secondAttribute="bottom" constant="8" id="GAP-BN-Om4"/>
                             <constraint firstItem="n8s-U0-B4f" firstAttribute="top" secondItem="W0F-1W-14f" secondAttribute="bottom" constant="8" id="HWc-PR-Ai3"/>
                             <constraint firstItem="W0F-1W-14f" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="Uiz-It-Fgc"/>
                             <constraint firstItem="sw2-HR-EOq" firstAttribute="top" secondItem="NCh-yP-6ka" secondAttribute="bottom" constant="8" id="VJj-sk-FZ9"/>
@@ -133,6 +147,7 @@
                             <constraint firstItem="NCh-yP-6ka" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="lTb-0x-tbL"/>
                             <constraint firstItem="8zP-b7-PJ7" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="pU3-XA-Gu6"/>
                             <constraint firstItem="n8s-U0-B4f" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="uX9-Su-YOT"/>
+                            <constraint firstItem="9qW-T2-ycx" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="zWf-Ud-inM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mZ3-di-zxv"/>

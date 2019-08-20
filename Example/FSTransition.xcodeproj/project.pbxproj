@@ -17,7 +17,12 @@
 		842E9D0922F406BC00DC4FED /* ScaleFristViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E9D0422F406BC00DC4FED /* ScaleFristViewController.swift */; };
 		842E9D0A22F406BC00DC4FED /* ScaleSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E9D0522F406BC00DC4FED /* ScaleSecondViewController.swift */; };
 		842E9D0B22F406BC00DC4FED /* ScaleFristViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842E9D0622F406BC00DC4FED /* ScaleFristViewController.xib */; };
-		842E9D0D22F4095E00DC4FED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842E9D0C22F4095E00DC4FED /* Assets.xcassets */; };
+		84CC964F230A445B00E54671 /* WeChatFloorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CC964D230A445B00E54671 /* WeChatFloorViewController.swift */; };
+		84CC9650230A445B00E54671 /* WeChatFloorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CC964E230A445B00E54671 /* WeChatFloorViewController.xib */; };
+		84CC9653230A448000E54671 /* WeChatFloorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CC9651230A448000E54671 /* WeChatFloorDetailViewController.swift */; };
+		84CC9654230A448000E54671 /* WeChatFloorDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CC9652230A448000E54671 /* WeChatFloorDetailViewController.xib */; };
+		84CC9656230A449600E54671 /* WeChatFloorTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CC9655230A449600E54671 /* WeChatFloorTransitionAnimation.swift */; };
+		84CC9658230BDC1200E54671 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84CC9657230BDC1200E54671 /* Assets.xcassets */; };
 		84D3D49C22F7C505007124D8 /* SliderSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D3D47722F7C504007124D8 /* SliderSecondViewController.swift */; };
 		84D3D49D22F7C505007124D8 /* SliderSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D3D47822F7C504007124D8 /* SliderSecondViewController.xib */; };
 		84D3D49E22F7C505007124D8 /* SliderFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D3D47922F7C504007124D8 /* SliderFirstViewController.swift */; };
@@ -82,7 +87,12 @@
 		842E9D0422F406BC00DC4FED /* ScaleFristViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleFristViewController.swift; sourceTree = "<group>"; };
 		842E9D0522F406BC00DC4FED /* ScaleSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleSecondViewController.swift; sourceTree = "<group>"; };
 		842E9D0622F406BC00DC4FED /* ScaleFristViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScaleFristViewController.xib; sourceTree = "<group>"; };
-		842E9D0C22F4095E00DC4FED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84CC964D230A445B00E54671 /* WeChatFloorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeChatFloorViewController.swift; sourceTree = "<group>"; };
+		84CC964E230A445B00E54671 /* WeChatFloorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeChatFloorViewController.xib; sourceTree = "<group>"; };
+		84CC9651230A448000E54671 /* WeChatFloorDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeChatFloorDetailViewController.swift; sourceTree = "<group>"; };
+		84CC9652230A448000E54671 /* WeChatFloorDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeChatFloorDetailViewController.xib; sourceTree = "<group>"; };
+		84CC9655230A449600E54671 /* WeChatFloorTransitionAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeChatFloorTransitionAnimation.swift; sourceTree = "<group>"; };
+		84CC9657230BDC1200E54671 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84D3D47722F7C504007124D8 /* SliderSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderSecondViewController.swift; sourceTree = "<group>"; };
 		84D3D47822F7C504007124D8 /* SliderSecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SliderSecondViewController.xib; sourceTree = "<group>"; };
 		84D3D47922F7C504007124D8 /* SliderFirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderFirstViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +173,7 @@
 		607FACD21AFB9204008FA782 /* Example for FSTransition */ = {
 			isa = PBXGroup;
 			children = (
+				84FB03F5230A41E30067BE4D /* WeChatFloor */,
 				84D3D48E22F7C505007124D8 /* Collection */,
 				84D3D47C22F7C504007124D8 /* OpenDoor */,
 				84D3D48222F7C504007124D8 /* OpenMiddle */,
@@ -181,10 +192,10 @@
 		607FACD31AFB9204008FA782 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				84CC9657230BDC1200E54671 /* Assets.xcassets */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD41AFB9204008FA782 /* Info.plist */,
-				842E9D0C22F4095E00DC4FED /* Assets.xcassets */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -301,6 +312,18 @@
 			path = SecondFloor;
 			sourceTree = "<group>";
 		};
+		84FB03F5230A41E30067BE4D /* WeChatFloor */ = {
+			isa = PBXGroup;
+			children = (
+				84CC964D230A445B00E54671 /* WeChatFloorViewController.swift */,
+				84CC964E230A445B00E54671 /* WeChatFloorViewController.xib */,
+				84CC9651230A448000E54671 /* WeChatFloorDetailViewController.swift */,
+				84CC9652230A448000E54671 /* WeChatFloorDetailViewController.xib */,
+				84CC9655230A449600E54671 /* WeChatFloorTransitionAnimation.swift */,
+			);
+			path = WeChatFloor;
+			sourceTree = "<group>";
+		};
 		C33EC065F0306B60649F884E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -403,15 +426,17 @@
 				84D3D4B922F7C505007124D8 /* SecondFloorSecondViewController.xib in Resources */,
 				842E9D0B22F406BC00DC4FED /* ScaleFristViewController.xib in Resources */,
 				84D3D4AB22F7C505007124D8 /* ScrollViewFirstViewController.xib in Resources */,
+				84CC9650230A445B00E54671 /* WeChatFloorViewController.xib in Resources */,
 				84D3D4A922F7C505007124D8 /* OpenMiddleSecondViewController.xib in Resources */,
 				84D3D4AE22F7C505007124D8 /* ScrollViewSecondViewController.xib in Resources */,
 				84D3D4B422F7C505007124D8 /* CollectionFirstViewController.xib in Resources */,
 				84D3D49D22F7C505007124D8 /* SliderSecondViewController.xib in Resources */,
 				84D3D4A422F7C505007124D8 /* OpenDoorSecondViewController.xib in Resources */,
 				84D3D49F22F7C505007124D8 /* SliderFirstViewController.xib in Resources */,
-				842E9D0D22F4095E00DC4FED /* Assets.xcassets in Resources */,
+				84CC9654230A448000E54671 /* WeChatFloorDetailViewController.xib in Resources */,
 				84D3D4B722F7C505007124D8 /* SecondFloorFirstViewController.xib in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				84CC9658230BDC1200E54671 /* Assets.xcassets in Resources */,
 				84D3D4A722F7C505007124D8 /* OpenMiddleFirstViewController.xib in Resources */,
 				84D3D4A122F7C505007124D8 /* OpenDoorFirstViewController.xib in Resources */,
 				842E9D0822F406BC00DC4FED /* ScaleSecondViewController.xib in Resources */,
@@ -504,12 +529,15 @@
 				84D3D4B322F7C505007124D8 /* CollectionFirstViewController.swift in Sources */,
 				84D3D49E22F7C505007124D8 /* SliderFirstViewController.swift in Sources */,
 				842E9D0922F406BC00DC4FED /* ScaleFristViewController.swift in Sources */,
+				84CC964F230A445B00E54671 /* WeChatFloorViewController.swift in Sources */,
 				84D3D4A222F7C505007124D8 /* OpenDoorTranstionAnimation.swift in Sources */,
 				84D3D4AD22F7C505007124D8 /* ScrollViewSecondViewController.swift in Sources */,
+				84CC9653230A448000E54671 /* WeChatFloorDetailViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				84D3D4AC22F7C505007124D8 /* ScrollViewFirstViewController.swift in Sources */,
 				84D3D49C22F7C505007124D8 /* SliderSecondViewController.swift in Sources */,
 				842E9D0A22F406BC00DC4FED /* ScaleSecondViewController.swift in Sources */,
+				84CC9656230A449600E54671 /* WeChatFloorTransitionAnimation.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				84D3D4B122F7C505007124D8 /* CollectionViewCell.swift in Sources */,
 				84D3D4AA22F7C505007124D8 /* OpenMiddleFirstViewController.swift in Sources */,

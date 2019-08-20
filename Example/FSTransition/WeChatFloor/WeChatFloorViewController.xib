@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WeChatFloorViewController" customModule="FSTransition_Example" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="UPE-Ww-Zfa" id="Nyb-AK-myy"/>
+                <outlet property="scrollView" destination="nrQ-Oc-HWe" id="j0R-TD-67b"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nrQ-Oc-HWe">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UPE-Ww-Zfa">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="371566193204_.pic_hd" translatesAutoresizingMaskIntoConstraints="NO" id="8nP-NO-6YH">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="8nP-NO-6YH" secondAttribute="height" multiplier="207:448" id="1Hw-HB-caS"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="8nP-NO-6YH" firstAttribute="top" secondItem="UPE-Ww-Zfa" secondAttribute="top" id="6uA-ZZ-AoL"/>
+                                <constraint firstItem="8nP-NO-6YH" firstAttribute="leading" secondItem="UPE-Ww-Zfa" secondAttribute="leading" id="QwX-SN-Y0d"/>
+                                <constraint firstAttribute="trailing" secondItem="8nP-NO-6YH" secondAttribute="trailing" id="bkC-Fi-6Xq"/>
+                                <constraint firstAttribute="bottom" secondItem="8nP-NO-6YH" secondAttribute="bottom" id="oPa-cE-hOT"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="UPE-Ww-Zfa" secondAttribute="bottom" id="Dif-73-y20"/>
+                        <constraint firstAttribute="trailing" secondItem="UPE-Ww-Zfa" secondAttribute="trailing" id="NmD-zu-vdE"/>
+                        <constraint firstItem="UPE-Ww-Zfa" firstAttribute="leading" secondItem="nrQ-Oc-HWe" secondAttribute="leading" id="o12-RO-LN5"/>
+                        <constraint firstItem="UPE-Ww-Zfa" firstAttribute="top" secondItem="nrQ-Oc-HWe" secondAttribute="top" id="raK-wc-MZc"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="UPE-Ww-Zfa" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="4mm-8D-Z0W"/>
+                <constraint firstAttribute="bottom" secondItem="nrQ-Oc-HWe" secondAttribute="bottom" id="Dsv-ll-rlt"/>
+                <constraint firstItem="nrQ-Oc-HWe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="G7y-Hb-oj0"/>
+                <constraint firstItem="nrQ-Oc-HWe" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="qsg-I1-552"/>
+                <constraint firstItem="nrQ-Oc-HWe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="tcb-C0-gZM"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="47.826086956521742" y="35.491071428571423"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="371566193204_.pic_hd" width="276" height="597.33331298828125"/>
+    </resources>
+</document>
