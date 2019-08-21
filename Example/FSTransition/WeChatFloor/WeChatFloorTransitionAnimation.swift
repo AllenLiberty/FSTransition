@@ -32,19 +32,15 @@ class WeChatFloorTransitionAnimation: FSTransitionAnimationProtocol {
         containerView.addSubview(snapFromView)
         snapToView.frame = CGRect(x: rect.width * 0.2, y: 0.0, width: rect.width * 0.6, height: rect.height * 0.6)
         
-        
-        
-        
         let backgroundView = UIView(frame: containerView.bounds)
         backgroundView.backgroundColor = UIColor(red: 237.0/255.0, green: 237.0/255.0, blue: 237.0/255.0, alpha: 1.0)
         containerView.addSubview(backgroundView)
         backgroundView.frame = CGRect(origin: CGPoint(x: 0, y: -containerView.frame.height), size: containerView.frame.size)
         
-        let indecatiorWidth: CGFloat = 100.0
+        let indecatiorWidth: CGFloat = 80.0
         let indecatiorHeight: CGFloat = 20.0
         let indecatiorView = WechatIndecatiorView.init(frame: CGRect(x: (backgroundView.frame.width - indecatiorWidth) / 2.0, y: backgroundView.frame.height - 30.0, width: indecatiorWidth, height: indecatiorHeight))
         backgroundView.addSubview(indecatiorView)
-        
         
         UIView.animateKeyframes(withDuration: 1, delay: 0, options: .calculationModeLinear, animations: {
             UIView.addKeyframe(withRelativeStartTime: 0.02, relativeDuration: 0.1, animations: {
