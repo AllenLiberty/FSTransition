@@ -43,10 +43,16 @@ class ViewController: UIViewController {
         let vc = ScrollViewFirstViewController.init(nibName: "ScrollViewFirstViewController", bundle: nil)
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    @IBAction func wecharTransition(_ sender: Any) {
+        let vc = WeChatFloorViewController.init(nibName: "WeChatFloorViewController", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
+    
 }
 

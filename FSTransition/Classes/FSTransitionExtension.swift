@@ -47,10 +47,12 @@ public extension UIViewController {
         self.present(viewController, animated: true, completion: nil)
     }
     
+    ///
     /// - Parameters:
     ///   - derection: the derections to response the gesture
-    ///   - view: the view to gesture the response if it's nil default the controller's view
-    ///   - progress: 0~1 defalut is 0.5. when the progress is more than this, the next controller will be appear.
+    ///   - view: the view will be registerd Gesture
+    ///   - responseOffset: define the response area to the view
+    ///   - progress:  0~1 defalut is 0.5. when the progress is more than this, the next controller will be appear.
     ///   - block: called when recieve the gesture
     func fs_registerToInteractiveTransition(_ derection: [TransitionDirection], view: UIView? = nil,responseOffset: CGFloat? = 40.0, progress: Float? = 0.5, block:@escaping (() -> ())) {
         let interactive = FSInteractiveTransition()
@@ -62,9 +64,12 @@ public extension UIViewController {
         
     }
     
+    ///
     /// - Parameters:
     ///   - derection: the derections to response the gesture
-    ///   - progress: 0~1 defalut is 0.5. when the progress is more than this, the next controller will be appear.
+    ///   - view: the view will be registerd Gesture
+    ///   - responseOffset: define the response area to the view
+    ///   - progress:  0~1 defalut is 0.5. when the progress is more than this, the next controller will be appear.
     ///   - block: called when recieve the gesture
     func fs_registerBackInteractiveTransition(_ derection: [TransitionDirection], view: UIView? = nil,responseOffset: CGFloat? = 40.0, progress: Float? = 0.5, block:@escaping (()->())){
         let interactive = FSInteractiveTransition()
