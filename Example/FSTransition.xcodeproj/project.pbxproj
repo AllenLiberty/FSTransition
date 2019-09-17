@@ -365,10 +365,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 73GQ475GFK;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 73GQ475GFK;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -668,6 +670,7 @@
 			baseConfigurationReference = 759926333B6695D9585AEA44 /* Pods-FSTransition_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 73GQ475GFK;
 				INFOPLIST_FILE = FSTransition/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -684,6 +687,7 @@
 			baseConfigurationReference = FA1D2846DE35FFA62E3482E9 /* Pods-FSTransition_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 73GQ475GFK;
 				INFOPLIST_FILE = FSTransition/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -699,6 +703,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 84E06A2EE0FAD3BD16514B08 /* Pods-FSTransition_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 73GQ475GFK;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -722,6 +727,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CCF10BCDA37C315DECEEC26F /* Pods-FSTransition_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 73GQ475GFK;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
